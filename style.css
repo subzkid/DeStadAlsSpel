@@ -1,0 +1,1072 @@
+/* NOTES:
+    Svg's hebben standaard diplay inline. verander naar block als iets niet lukt.
+
+    Als je opeens overflow krijgt kijk dan of je de svg, div etc op position absolute hebt gezet.
+
+    LET OP kruis bij spelregel pop up heet #f99c38f1-b393-4c08-a574-d057c6e47f74 ALS JE DE SVG UPDATE KIJK DAN OF DE ID NOG KLOPT.
+
+    LET OP als je svg knoppen update KIJK DAN OF DE CLASSNAMES NOG KLOPPEN MET DE ACTIVE STATE
+
+    Heb je problemen met de active state van de knoppen dan kan het liggen aan de text die je er met een p tag in hebt geschreven zet die p boven alle svg knoppen om het op te lossen.
+
+    als je svg horizontaal wilt uitlijnen gebruiken dan deze codes:     
+        margin-left:auto;
+        margin-right: auto;
+        right:0;
+        left:0;
+
+    Bij de "specs" svg van de monsters moet je hand matig: font-weight: 400; toevoegen in de class waar ook font-family:Montserrat-Regular, Montserrat; staat.
+
+    Heb je tijd over? pas dan de achtergrond voor de monsters aan zodat het in repeat kan worden gezet en het er beter uit ziet op andere formaten.     background-repeat: repeat-x; height: 100vh; width: 100vw; background-size: contain;
+*/
+
+html,body {
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+/* Home svg codes + BG + eigen css styling svg's */
+#homeBG {
+    height: 100%;
+    background-image: url(links/homeBG.svg);
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+.scaleBrowser {
+position: absolute;
+background-color:rgba(0,0,0,0.7);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+
+.scaleText, .popUpSluiten {
+  opacity: 1;
+  color: white;
+  font-family: "arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 50px;
+  margin: 0px;
+}
+
+.popUpSluiten {
+    top: 75%;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px){
+  .scaleBrowser {
+     display: none; 
+  }
+}
+
+/* Home SVG CODE */
+
+
+/* spelregels */
+
+
+.\38 6c596d7-e02b-4324-b7ea-4952307f8ce3{isolation:isolate;}.cdbac7ce-96b7-4307-a08c-708e21c6f9d0{fill:#fff4c6;}.d010ee4e-8903-4af8-a303-31d00d4635cf{fill:#7e451e;}.ba7380b0-6cae-4a15-b8e2-f054c28da3c8{font-size:62.89px;fill:#8f7239;font-family:HelveticaNeue-Bold, Helvetica Neue;letter-spacing:0.05em;}.b686ef34-a10b-46f8-9e65-44ae3eb3d73e,.ba7380b0-6cae-4a15-b8e2-f054c28da3c8{font-weight:700;}.\31 ce3dd98-e728-4d0b-b94e-4172a1044bec{letter-spacing:0.03em;}.a14aa2ce-d0c7-4a71-a632-7c63d0bbc184{letter-spacing:0.05em;}.\34 b58cb0d-d97f-4f13-af6a-c3385834d52c{opacity:0.95;}.\36 b6531cc-50c7-4359-91dc-ae8d5dbaa37e{fill:#e3d59c;}.\31 5725c2c-268c-45b8-8120-14bdc3011697,.\37 3600164-75df-47df-af02-c7461cf66934,.b686ef34-a10b-46f8-9e65-44ae3eb3d73e{fill:#ede1b0;}.fbfe17a3-eaae-44a4-b4de-a70e76de26d3{fill:#603316;}.bf06a242-4b55-42ab-929e-e49788172698{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\33 a24b055-7811-4ea1-b6c4-135090f85025{fill:#eec21b;}.af5b889b-2165-411b-81ba-f71cca3b7aac{fill:#ffcf02;}.\31 5aa82a5-d6ac-4e19-a9a9-780e0d0d8694{fill:#fff;}.b475dd1a-5d36-4432-b85e-503e67b5287f{fill:#231f20;}.f9ef1621-cef9-4817-ab47-f8883aea9d11{fill:#ededeb;}.c8665a4d-e4e7-4011-a705-408356e565a9{fill:#31aae1;}.c46185f1-655e-4a0c-96bb-0af52a4e027c{fill:#010101;}.\37 55266d0-f42a-405e-b021-466ecf5b8c49{opacity:0.72;}.\34 0bb1e67-9dd5-4b1d-b506-541808d96950{fill:#64cdf6;}.\39 4874a21-704e-41ca-a6b4-2eccc6ceadd9{fill:#2d95d2;}.c3f120c6-0262-4406-afec-45f728aa5836{fill:#c2c1c1;}.\39 99a0e56-967d-46d4-b9ba-7445cb3ea18c{fill:#949494;}.aebb06f9-2816-4e31-87a0-b19d4a62bcf3{fill:#757676;}.\33 dfb5be6-7878-47d6-8fc5-50b9671dab58{fill:#f04e23;stroke:#231f20;stroke-width:1.53px;}.\33 dfb5be6-7878-47d6-8fc5-50b9671dab58,.a1b6165a-0437-40ef-a04b-c11e29f088c8{stroke-miterlimit:10;}.e3753e7a-8623-4121-8652-ab56ffe051ea{fill:#f47421;}.ac2ba8ac-3850-44cc-a3e2-af2f27824f65{fill:#fec014;}.\35 9159539-9f8f-4fc1-814f-f7f930d6dd7c{font-size:36px;fill:#bcaf7d;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.05em;}.b5d4ab2e-b3ef-4cf2-a245-c7c750ce9ef1{letter-spacing:0.03em;}.d1f9cd86-bfbc-4c85-8d22-96de56a7b2ac{letter-spacing:-0.04em;}.\30 984e328-2fc9-412b-ac57-fdd008147871{letter-spacing:0.03em;}.\31 8086581-a23d-489c-b8d6-5215f2f7f26f,.b577957d-fa8c-4259-a0ec-342de041639d{fill:#fffbdd;}.\32 25d6e8a-47cf-4a6a-8851-91ca6f5eba8f,.b577957d-fa8c-4259-a0ec-342de041639d{opacity:0.8;}.\30 e6110b9-5376-4802-9281-8de230d8d443,.a1b6165a-0437-40ef-a04b-c11e29f088c8{fill:#7a1317;}.bf3cdd26-c975-4a18-95bd-4873d1ed67cc{fill:#ec2329;}.a1b6165a-0437-40ef-a04b-c11e29f088c8{stroke:#eb2328;stroke-width:1.96px;}.\37 3600164-75df-47df-af02-c7461cf66934{opacity:0.6;}.\33 24fdab2-c5f2-44b6-9a2d-6f8d20df29f7{fill:#e4d59c;}.\37 29d8528-012e-4fae-b9dd-5d6c737c818f{fill:#fffbdb;}.b686ef34-a10b-46f8-9e65-44ae3eb3d73e{font-size:19.6px;font-family:Montserrat-Bold, Montserrat;letter-spacing:0.1em; font-weight: 400;}
+
+/* LOGO */
+
+
+.\30 3e183f6-6157-4f88-8875-c1196db98e3f,.\31 5f26648-215e-42ae-af7d-a86a223c2e2d,.\31 f602688-8a49-4066-ba70-88a1abdc01e0,.\33 b962cff-6b0b-434b-bcce-616e46bf65a2,.\34 fc8fb02-05a3-4424-986f-8294b9f10000,.\36 c5ed4e8-abfd-4125-ab32-f9b3f8fa8821,.\37 124011f-2fca-492c-8fc5-b44c3af69d08,.\37 c703a42-6508-47ea-980e-50600d3f644f,.\38 9012ce2-3703-424f-9689-8ff17d6a8915,.\39 3145afe-5843-452b-b076-6d1f6d667220,.\39 4f9ae84-0d9f-4b05-91e3-562260efceee,.dd91cb40-3502-4f2b-8160-cd287a64cd8e,.e322b503-53bb-4a71-b980-5791c8ef5470,.fdc9a7bf-7fb6-47eb-9081-324cde4a6823{fill:none;}.\30 3e183f6-6157-4f88-8875-c1196db98e3f,.\31 5f26648-215e-42ae-af7d-a86a223c2e2d,.\31 f602688-8a49-4066-ba70-88a1abdc01e0,.\33 b962cff-6b0b-434b-bcce-616e46bf65a2,.\34 c6e2a03-edbe-43d1-af5e-3bdfa5409d1b,.\34 fc8fb02-05a3-4424-986f-8294b9f10000,.\36 c5ed4e8-abfd-4125-ab32-f9b3f8fa8821,.\37 124011f-2fca-492c-8fc5-b44c3af69d08,.\37 c703a42-6508-47ea-980e-50600d3f644f,.\38 9012ce2-3703-424f-9689-8ff17d6a8915,.\39 3145afe-5843-452b-b076-6d1f6d667220,.\39 4f9ae84-0d9f-4b05-91e3-562260efceee,.dd91cb40-3502-4f2b-8160-cd287a64cd8e,.e322b503-53bb-4a71-b980-5791c8ef5470,.fdc9a7bf-7fb6-47eb-9081-324cde4a6823{stroke-miterlimit:10;}.\30 3e183f6-6157-4f88-8875-c1196db98e3f,.\31 f602688-8a49-4066-ba70-88a1abdc01e0,.\34 fc8fb02-05a3-4424-986f-8294b9f10000,.\36 c5ed4e8-abfd-4125-ab32-f9b3f8fa8821,.\37 124011f-2fca-492c-8fc5-b44c3af69d08,.\37 c703a42-6508-47ea-980e-50600d3f644f,.\39 3145afe-5843-452b-b076-6d1f6d667220,.dd91cb40-3502-4f2b-8160-cd287a64cd8e,.e322b503-53bb-4a71-b980-5791c8ef5470,.fdc9a7bf-7fb6-47eb-9081-324cde4a6823{stroke-width:6.11px;}.\36 c5ed4e8-abfd-4125-ab32-f9b3f8fa8821{stroke:url(#d700e357-513f-4251-8a1d-ff7844884bb7);}.\37 124011f-2fca-492c-8fc5-b44c3af69d08{stroke:url(#2b8327b7-d059-4a1d-b9e6-fe0b85ed1bf3);}.\31 5f26648-215e-42ae-af7d-a86a223c2e2d,.\33 b962cff-6b0b-434b-bcce-616e46bf65a2,.\38 9012ce2-3703-424f-9689-8ff17d6a8915,.\39 4f9ae84-0d9f-4b05-91e3-562260efceee{stroke-width:1.02px;}.\31 5f26648-215e-42ae-af7d-a86a223c2e2d{stroke:url(#1b81e858-d3b0-46fe-b965-c8acb108a09d);}.dd91cb40-3502-4f2b-8160-cd287a64cd8e{stroke:url(#f90e8042-0d17-410c-b0b6-069cdf67048f);}.e322b503-53bb-4a71-b980-5791c8ef5470{stroke:url(#db4353cc-2693-4bae-97a5-f5247bde8d59);}.\38 9012ce2-3703-424f-9689-8ff17d6a8915{stroke:url(#76b442fc-4f54-4707-b90b-251cbf0c137b);}.\37 c703a42-6508-47ea-980e-50600d3f644f{stroke:url(#77fe2b5b-f333-4d08-9a05-714887b20a97);}.\35 e075f9f-8447-4761-834f-e5e990367236{fill:url(#03ef113d-405a-46bb-9990-d7d51d539817);}.\33 ba6575f-0c10-4d4e-a9ee-755881ecb5d2,.\34 c6e2a03-edbe-43d1-af5e-3bdfa5409d1b{fill:#8c4f21;}.\31 efe3bd0-6456-49b8-ac09-72ba3a0bc8a1{isolation:isolate;}.bbf3e2fb-45da-40fa-b6bf-2c57a8febfb3{clip-path:url(#03ec863a-f189-45d4-803f-b3300269f6bc);}.\30 3e183f6-6157-4f88-8875-c1196db98e3f{stroke:url(#1f689383-811c-411c-b899-6d50726d2d17);}.c993c363-6442-49d8-bfce-5cdbf2d74a03{clip-path:url(#194e58f3-8e9f-4725-87f1-501dabfe26a6);}.\39 3145afe-5843-452b-b076-6d1f6d667220{stroke:url(#eea75931-65d8-44e9-a36a-1e7458021bc9);}.\36 e702cd5-3c41-414d-9199-e81d02322022{fill:#606060;}.\39 7cbbf2d-23ef-4561-a4ac-af779042f123{fill:#db8127;}.\35 e9e90af-f9ed-401f-8dd3-3afc20104457{fill:#e89324;}.b9400c68-acd4-4145-b793-637d39c64f31{clip-path:url(#2683bb3f-b825-435f-9cba-c859675dc020);}.\39 4f9ae84-0d9f-4b05-91e3-562260efceee{stroke:url(#174ad44f-2bd3-441e-9dfe-aad04d36f6be);}.\38 bff01e5-2e5c-41ec-a7b6-5a8503ffba60{clip-path:url(#37a53f4d-44ca-453a-a1e2-8d1f9665be75);}.\34 fc8fb02-05a3-4424-986f-8294b9f10000{stroke:url(#6f953366-d393-4f61-b003-972a3fb5df7a);}.\36 f861432-94e5-4b2f-a978-8e6334262e84{clip-path:url(#aee952ab-f684-4224-9e9d-b22f419436a0);}.fdc9a7bf-7fb6-47eb-9081-324cde4a6823{stroke:url(#dafd285f-5e3c-42d1-b75c-6785c82cea68);}.\34 30fefb2-0122-4e00-ad61-d57cdeb278ac{fill:#e5e5e5;}.e50f9d83-0ade-464b-aa70-c63985082e95{clip-path:url(#b5e309c2-3157-4223-868c-930b23640bc3);}.\33 b962cff-6b0b-434b-bcce-616e46bf65a2{stroke:url(#6159aa5b-0036-4d62-90e0-cf847cf3e212);}.a083531e-8bdf-45c4-af40-25aec1ed72ce{clip-path:url(#bba251cb-184b-4da7-a3b4-a15da3f3a9dc);}.\31 f602688-8a49-4066-ba70-88a1abdc01e0{stroke:url(#1a7c807d-3807-4161-9a1c-20baca9ec780);}.e8a2ee46-dc08-4ed7-9f66-40ffe657c96d{fill:#663617;}.\34 c6e2a03-edbe-43d1-af5e-3bdfa5409d1b{stroke:#663617;stroke-width:3.42px;}
+
+/* Monster */
+.e34c1bd9-0a99-4187-afde-2f64c3e4f1ec{fill:#f6bc2e;}.\34 63009f0-4b24-4c7a-8a55-76d78f6045b2{fill:#493115;}.f837790d-3c63-4a00-947b-00a2f02087f8{fill:#452d12;}.c3b4952a-60b2-4ab4-9a0f-bb2677d77abd{fill:#462d13;}.cdda5d65-8cc0-4625-ab8e-a41a5479f930{fill:#db8427;}
+
+/* Account */
+.\39 f3b9be2-2fe7-4725-8297-67c330b33699{fill:#f6bc2e;}.\31 0eeff50-73c1-4746-a74c-163879ea1f7a{fill:#493115;}.c2f7e987-e976-4a7b-992d-7e4b05f3a1f2{fill:#db8427;}.\33 359586f-9726-4a25-aaf8-75121b78b2e1{fill:#462d13;}
+
+/* Info */
+.dbf18e79-5170-4f5a-9f2d-8cc8105103b7{fill:#493115;}.e5127a9a-1156-4a10-a0d2-89d3f0668cab{fill:#f6bc2e;}.\33 60f7944-9830-4ce1-a194-30c09f9cba58{fill:#db8427;}.d9becac5-e098-4873-a95d-f2f5a2383086{fill:#462d13;}
+
+
+/* Home EIGEN CODE */
+
+/* ontzichtbare overlay voor de tap to play function, height is 80% om missclicks op de account en monster knop te voorkomen */
+#BgLink {
+    width:100vw;
+    height:80%;
+}
+
+
+/* spelregels */
+#spelregels {
+    height: 96%;
+    width: 100vw;
+    margin-top: 12px;
+    position: absolute;
+    overflow-y: hidden;
+    z-index: 100;
+}
+
+#BgSpelregels {
+    width:100vw;
+    height:100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 50;
+
+}
+
+.DisplaySpelregels {
+    display: none !important;
+}
+
+/* Logo */
+#logoHome {
+    width: 65%;
+    margin-left: 6.2%;
+    position: absolute;
+    top: 35%;
+    left: 12%;
+    bottom: 50%;
+    margin-bottom: 40px;   
+}
+
+@media screen and (min-width: 800px){
+    #logoHome {
+        width: 50%;
+        max-width: 500px;
+        left: 22%;
+    }
+}
+
+/* Knoppen */
+#monsterKnop {
+    width: 40%;
+    max-width: 250px;
+    margin-left: 6.2%;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin-bottom: 40px;
+}
+
+/* active style */
+#monsterKnop:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#monsterKnop:active .e34c1bd9-0a99-4187-afde-2f64c3e4f1ec {
+    fill: #eca521;
+    outline: none;
+}
+#monsterKnop:active .cdda5d65-8cc0-4625-ab8e-a41a5479f930 {
+    fill: #d87227;
+    outline: none;
+}
+
+#accountKnop {
+    width: 40%;
+    max-width: 250px;
+    margin-right: 6.6%;
+    position: absolute;
+    bottom:0; 
+    right:0;
+    margin-bottom: 40px;
+}
+/* active style */
+#accountKnop:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#accountKnop:active .\39 f3b9be2-2fe7-4725-8297-67c330b33699 {
+    fill: #eca521;
+    outline: none;
+}
+#accountKnop:active .c2f7e987-e976-4a7b-992d-7e4b05f3a1f2 {
+    fill: #d87227;
+    outline: none;
+}
+
+
+#infoKnop {
+    width: 10%;
+    max-width: 50px;
+    margin-right: 6.6%;
+    position: absolute;
+    top:0; 
+    right:0;
+    margin-top: 20px;
+}
+/* active style */
+#infoKnop:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#infoKnop:active .e5127a9a-1156-4a10-a0d2-89d3f0668cab {
+    fill: #eca521;
+    outline: none;
+}
+#infoKnop:active .360f7944-9830-4ce1-a194-30c09f9cba58 {
+    fill: #d87227;
+    outline: none;
+}
+
+/* Tap to play text */
+.tapToPlay {
+    margin: 0px;
+    padding: 0px;
+    
+    /* centerering text */
+    text-align: center;
+    position: absolute;
+    top: 72%;
+    bottom: 50%;
+    width: 100%;
+
+    /* style */
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    /* 700 = monterrat bold, 400 is regular  */
+    font-weight: 700;
+    color: white;
+    
+    /* animation */
+    -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+    animation-timing-function: linear;
+    animation: linear;
+        
+    -webkit-animation: TapToPlayAnimation 4s infinite; /* Safari 4+ */
+    -moz-animation:    TapToPlayAnimation 4s infinite; /* Fx 5+ */
+    -o-animation:      TapToPlayAnimation 4s infinite; /* Opera 12+ */
+    animation:         TapToPlayAnimation 4s infinite; /* IE 10+, Fx 29+ */
+}
+
+/* Animation text: tap to play */
+@-webkit-keyframes TapToPlayAnimation {
+  0%   { opacity: 1; font-size: 14.5px;}
+  50% { opacity: 0.7; font-size: 14px;}
+  100% { opacity: 1; font-size: 14.5px;}
+}
+@-moz-keyframes TapToPlayAnimation {
+  0%   { opacity: 1; font-size: 14.5px;}
+  50% { opacity: 0.7; font-size: 14px;}
+  100% { opacity: 1; font-size: 14.5px;}
+}
+@-o-keyframes TapToPlayAnimation {
+  0%   { opacity: 1; font-size: 14.5px;}
+  50% { opacity: 0.7; font-size: 14px;}
+  100% { opacity: 1; font-size: 14.5px;}
+}
+@keyframes TapToPlayAnimation {
+  0%   { opacity: 1; font-size: 14.5px;}
+  50% { opacity: 0.7; font-size: 14px;}
+  100% { opacity: 1; font-size: 14.5px;}
+}
+
+
+/* Account assets */
+
+/* SVG codes */
+
+/* rode knop */
+.\39 539fc35-c33d-486f-86c3-a48df7930b14,.aa6300e1-117f-4e27-a406-fc4394bc1d60{fill:#7a1317;}.\35 b4ab3db-20b2-408b-ab31-1c0ebb31234b{fill:#ed2229;}.aa6300e1-117f-4e27-a406-fc4394bc1d60{stroke:#ea2228;stroke-miterlimit:10;stroke-width:1.87px;}
+
+/* Profiel foto, Ranking, XP Bar */
+
+
+.a8bcc450-c201-43c5-8a3d-352c8be9e2a6{fill:#efefef;}.bbca37f2-da0a-4166-9da9-01dee0257223{fill:#ddd;}.\34 3ed3dff-341e-4423-9da4-99cc99dba2b6,.b2ae3b8d-e388-4935-acba-01fb02ed7881{fill:none;stroke:#7f461e;stroke-miterlimit:10;}.\34 3ed3dff-341e-4423-9da4-99cc99dba2b6{stroke-width:14.94px;}.\32 901f9c7-cc88-4952-97b7-c84ac6d8cc77{font-size:66.38px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;letter-spacing:0.02em;}.\32 8e9eb7f-8590-49a7-88aa-21f24261acee,.\32 901f9c7-cc88-4952-97b7-c84ac6d8cc77,.\37 51427eb-e731-4507-86d4-12d13343f565{font-weight:700;}.bc6f5061-ddb3-425e-9355-0541f121eac5{letter-spacing:0.02em;}.\32 8e9eb7f-8590-49a7-88aa-21f24261acee{font-size:27px;letter-spacing:0.05em;}.\32 8e9eb7f-8590-49a7-88aa-21f24261acee,.\37 51427eb-e731-4507-86d4-12d13343f565{font-family:HelveticaNeue-Bold, Helvetica Neue;}.\34 081c84e-3fe1-4147-acd0-abfbebef7b8e{letter-spacing:0.01em;}.\34 679280b-e5fe-420d-a528-8154249c04a6{letter-spacing:1.01em;}.ec864aee-117c-4375-ad7c-0f3c0ffe1556{letter-spacing:1.06em;}.\38 6e1d1e1-4932-42ce-9a4a-fb4bce003656{fill:#5c266d;}.\39 a5f87d5-95f9-4a9a-b723-eea708e0acaa{fill:#ed40f2;opacity:0.75;}.b2ae3b8d-e388-4935-acba-01fb02ed7881{stroke-width:6.43px;}.\38 1c5d524-d4a3-44b9-b79f-300fb9dd4426{font-size:49.75px;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.02em;}.\37 51427eb-e731-4507-86d4-12d13343f565{font-size:29.04px;letter-spacing:0.05em;}.c577a6a3-b7fb-4f4b-946a-22a7ebc51bb3{fill:#483015;}.\37 2de56c0-3739-4041-be31-f607348399eb{fill:#f5bb2d;}.\33 9f54b68-3150-4099-b9b6-04847cc31d31{fill:#da8327;}
+
+/* wins and loses */
+
+
+.ac56e80b-a5a5-43d8-9e9f-cbecf2bd20e7{fill:#7d461d;}.\38 d2e1832-c2b7-4af8-b539-1a47d44ef50d,.ae2d30be-d1e6-43fc-a924-38e182b2810b,.f1a39980-3e61-48ee-9d20-1917d625c1cc{fill:#fff;}.\37 4434025-0289-49d6-b517-a1bc0df595fd{fill:#57b847;}.ecc3c026-4ed5-4acd-b3a6-ad1c7f2cb5bb{opacity:0.31;}.a0c0e8ff-a119-4baa-95d7-36e9db7e0318{fill:#cae3b3;}.\32 022e760-1a72-40cc-98fa-5f7dd3339e7f{fill:#88c440;}.c8b56bda-f4ba-4a5d-8cc5-73548f08cfbf{fill:#c92628;}.a1ffef9a-a74b-4dfb-a355-7af406895d48{fill:#e1b4b4;}.\34 f906690-10e8-4011-846d-4f36c56593ce{fill:#891a1b;}.\38 d2e1832-c2b7-4af8-b539-1a47d44ef50d,.f1a39980-3e61-48ee-9d20-1917d625c1cc{font-size:43.16px;font-family:HelveticaNeue-Bold, Helvetica Neue;}.\38 d2e1832-c2b7-4af8-b539-1a47d44ef50d,.f1a39980-3e61-48ee-9d20-1917d625c1cc,.f4db4ec3-7978-485b-8ebd-61681daf5ccd{font-weight:700;}.\31 b0d2484-2de5-40a6-839d-31d1151d19bb,.f1a39980-3e61-48ee-9d20-1917d625c1cc{letter-spacing:0.03em;}.\38 d2e1832-c2b7-4af8-b539-1a47d44ef50d{letter-spacing:-0.02em;}.f4db4ec3-7978-485b-8ebd-61681daf5ccd{font-size:37px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;letter-spacing:0.02em;}.\32 d6d20eb-30b8-4625-a0fb-5bb07db39112{letter-spacing:0.02em;}.\31 fdd7bd6-9c62-464d-8f3b-306fb2e5987d{letter-spacing:0.03em;}.\34 aa571aa-378d-46fd-be64-c627c4d4a345{letter-spacing:0.02em;}
+
+/* Logout */
+.\31 c335b81-34ce-4472-baff-86c080113a1e{fill:#f5bb2d;}.\33 1d18e51-607f-4f6e-961a-a31af7ffed9b{fill:#483015;}.\30 3c20386-dc8e-4a88-bf8c-11bd2eb6b788{fill:#da8327;}.b6e93ba2-7178-42dc-99a8-462dbe67c476{font-size:52.55px;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;letter-spacing:0.1em;}.\30 a50e67a-6a63-4da7-8cdb-1af3c676412b,.b6e93ba2-7178-42dc-99a8-462dbe67c476{fill:#452d13;}
+
+
+/* eigen css */
+#accountBG {
+    width: 100vw;
+    height: 100%;
+    background-color: #fffadc;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #7f461e;
+    -moz-box-shadow:inset 0px 0px 0px 10px #7f461e;
+    box-shadow:inset 0px 0px 0px 10px #7f461e;
+}
+
+#accountRodeKnop {
+    width: 10%;
+    max-width: 50px;
+    margin-right: 6.6%;
+    position: absolute;
+    right:0;
+    margin-top: 20px;
+}
+
+#accountProfiel-ranking-xpBar {
+    width: 55%;
+    max-width: 250px;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    margin-top: 50px;
+    position: absolute;
+}
+
+#winsAndLosesBar {
+    width: 75%;
+    max-width: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    position: absolute;
+    bottom: 30%;
+}
+
+#logout {
+    width: 40%;
+    max-width: 200px;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    position: absolute;
+    bottom: 10%;
+}
+/* active style */
+#logout:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#logout:active .\31 c335b81-34ce-4472-baff-86c080113a1e {
+    fill: #eca521;
+    outline: none;
+}
+#logout:active .\30 3c20386-dc8e-4a88-bf8c-11bd2eb6b788 {
+    fill: #d87227;
+    outline: none;
+}
+
+
+/* Monster collection */
+
+/* SVG */
+
+/* Camera Icoon */
+.ff4a69d4-ce4d-4d1c-a260-1e4d008ee307{fill:#493115;}.a47411ee-70b6-4ab3-9423-fc22511ffd0e{fill:#f6bc2e;}.\35 7bb8bf6-1463-4bbd-a65e-99b91d99aa50{fill:#db8427;}.daab678c-e6b8-49a0-89e7-9ccfc2035c5f{fill:#462d13;}
+
+/* Filter Iconen */
+.cd74f0b0-33ce-4d0f-b1b5-1bb2c18175cc{isolation:isolate;}.e18152f5-eeda-4f71-8437-c141925a4517{fill:#603316;}.\39 1c266b3-42bc-4a4a-be73-b178e181e767{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\38 65f1cde-a52f-4a4c-948c-9fe12aa6e4a5{fill:#eec21b;}.d2f44e3e-635d-4727-9005-e27f1de19cff{fill:#ffcf02;}.\33 18abf20-2dd1-446b-ba69-6aa86fab9d38{fill:#f04e23;stroke:#231f20;stroke-miterlimit:10;stroke-width:2px;}.\38 5f6ecae-297d-450e-b1fa-75bc337d2b06{fill:#f47421;}.ac843c35-defa-4c4d-9a44-bc62e8eff75c{fill:#fec014;}.\34 95ba1de-9e10-42e8-a16c-497443d2d454{fill:#c2c1c1;}.\34 e84e6a3-d179-4ab0-a9ce-76d86de6d818{fill:#010101;}.\31 bc23b61-849b-46e0-9a42-ff3f529a20c9{fill:#949494;}.c724994f-5fac-4ee2-a2fd-be3addbbdfe3{fill:#757676;}.ec4d5eec-7002-48c3-8d0c-268418798ce9{fill:#31aae1;}.\37 341e36c-1938-45c5-b303-5b7019df2bb7{opacity:0.72;}.\35 d941317-16b3-4d20-9c96-d6ef8248020f{fill:#64cdf6;}.\38 bcd94c7-3d64-46ee-9e8c-b225e96aacd4{fill:#2d95d2;}.\33 82712a9-ce8c-4a9d-ac1e-586ad99df8ef{fill:#fff;}.e01ea978-cb2b-42a7-988c-4fb8476c2ab2{fill:#231f20;}.\35 7c20315-8551-4c43-9f4b-4c89b07dfbee{fill:#ededeb;}
+
+/* fire card */
+
+
+.\39 e7936ab-f363-4960-8dc0-14494f230b66{isolation:isolate;}.\36 41d73dc-0af8-47c8-b18a-d9f0e4a01ea5{fill:#eae1b2;}.\34 73f4649-45d4-422d-8c3f-a34f64461682{fill:#542d1b;}.b6c52f22-c102-4e08-a4a1-72b366625ae8{fill:none;stroke:#fefbdf;stroke-width:7px;}.b6c52f22-c102-4e08-a4a1-72b366625ae8,.d45bf736-2865-48d5-a98b-433ad1ff4a5a,.f59b2f79-015e-4d52-a209-8c01be5d78ca{stroke-miterlimit:10;}.c919e538-1798-4c0a-9221-1be04e54bb93{fill:#603316;}.debf4d74-6983-43fd-9b86-195f697c5f93{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\38 a8eead1-82c9-45bf-aed2-1d381347e547{fill:#eec21b;}.\35 e7a7f44-0f8c-4f3a-b233-4bdceea9f64a{fill:#ffcf02;}.f59b2f79-015e-4d52-a209-8c01be5d78ca{fill:#f04e23;stroke:#231f20;stroke-width:2px;}.\35 9858dda-dd61-4bee-8ff6-08c35b682af0{fill:#f47421;}.\32 b0764d1-f893-4e31-9450-bd76bcc7d742{fill:#fec014;}.\30 90c2c83-bc6c-4631-b656-b8675aea417d{fill:#ee2937;}.b686cfcb-6adf-41b7-bb10-56b7bd69c78b{fill:url(#7f8b9897-a1b0-424a-977f-f3d6c2774222);}.b0d052d6-0b2e-4d86-a09d-b696786e8e5f{fill:url(#42b81be2-de58-405f-aad2-ac12e985dc18);}.\35 4792ec1-4997-4883-ad75-a807131b1e33{fill:url(#52150f92-df02-449d-ae5c-de7e8cd34c05);}.\31 3cb10b7-c184-467c-a8fa-cbc67c9b6de4{opacity:0.5;fill:url(#2ab17389-b380-419d-ac93-c6bf80ce683d);}.d45bf736-2865-48d5-a98b-433ad1ff4a5a{stroke:#dcdbdb;stroke-width:0.72px;fill:url(#92e6c7b0-9718-43ce-9dea-e1fe23d67318);}.a803afe8-6d82-43bf-a611-faa0075ae410{fill:url(#4dd24869-2c97-490a-ae15-bf4896cc1825);}.\39 9bbef5d-3df1-42a3-8f2d-28df26ac52f7{fill:#2d2d2d;}.\36 c7c1440-e2ec-4c41-b077-e81b847c9150{fill:#fff;}.\39 aff52a0-644c-453d-9bfe-ed28b4bc1e3c{fill:#ffc709;}.a9ec2b81-50d5-44ed-9504-18fd8a6acea7{fill:url(#e4fbef50-6d80-4a3e-a9f5-ab4a9cd13988);}.\34 61e84dc-2e23-4a73-94f7-25b0dcdbd013{fill:url(#8bba5ccb-1176-4d0f-9b56-c28eafb87905);}.\39 81e8524-b62b-4429-8a4e-1252d74e6c0c{fill:url(#33081102-3350-408b-9813-4b29358d466f);}.\32 581229c-e4e7-4a38-a4b7-d329c37964f8{fill:url(#c87fbd7c-e818-4663-86a5-8e89333c047e);}
+
+/* stone card */
+
+
+.\36 1bee16d-a7ed-4211-8843-8a89981ae11f{isolation:isolate;}.e508b411-20a0-447e-aaeb-a2b10568e7fd{fill:#eae1b2;}.\35 eff756c-d217-4f7f-8e60-d8fdb243f720{fill:#542d1b;}.\39 037ccf1-898b-4ca3-9451-e577b7921453,.ca924460-7991-4f50-acb1-6e128a7430b5{fill:none;}.ca924460-7991-4f50-acb1-6e128a7430b5{stroke:#fefbdf;stroke-width:7px;}.ca924460-7991-4f50-acb1-6e128a7430b5,.cb9a37c4-6a0c-434e-9991-948a33952404,.d085101f-3ae7-443e-8aff-5712b59abae0{stroke-miterlimit:10;}.\35 d4b6abc-03bd-483e-875c-cb788d7fab3f{fill:#603316;}.\30 21d1854-d125-4960-a204-b5f7a3fa8127{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\31 a0e9b4e-af78-4636-bf7d-6c5cdc86183f{fill:#eec21b;}.\39 6d4a123-5854-478e-b311-f8881d9ffd19{fill:#ffcf02;}.\36 cc79ed8-5b99-4d8d-84bc-a05c6ad85b7e{fill:#c2c1c1;}.\38 c9430a3-bfd2-4d7a-aec8-40acafcb06a5{fill:#010101;}.\32 ef13c4e-6c34-4b39-adc5-43af9caecc5d{fill:#949494;}.\39 8b0e107-6029-400f-89fb-12e1af029c4f{fill:#757676;}.\30 fd13945-9960-47c9-a089-7cd9cee73c6a{fill:#030302;opacity:0.6;}.\31 901555f-3324-44b9-97ce-2bc435cffc96{fill:#23150b;}.cb9a37c4-6a0c-434e-9991-948a33952404{fill:#d22627;stroke-width:0.57px;}.cb9a37c4-6a0c-434e-9991-948a33952404,.d085101f-3ae7-443e-8aff-5712b59abae0{stroke:#000;}.\34 d27f96d-1207-406d-a95d-dd9a3068b76f{fill:#e54a52;}.b6760c30-7622-4d79-aa64-3702242efe53{fill:#231f20;}.\30 51f3075-351b-45f1-8873-dcfd28b2a453,.\38 b5a3dca-356e-4bfb-aed1-7351ab3309ce,.f16bca21-cab1-4b79-a36a-17ca83883000{opacity:0.2;}.f16bca21-cab1-4b79-a36a-17ca83883000{fill:url(#adee531c-7ff4-42e9-9517-627061dc394e);}.\31 7cc367e-357e-498f-a5d9-740af7b6eb09{fill:#5e4730;}.\34 5fbaf31-bda8-4f01-b002-6889aa8cfe9e{fill:#3e2514;}.\34 52518a2-5726-4b00-93c7-e7a9eab55c8c,.d085101f-3ae7-443e-8aff-5712b59abae0{fill:#553d29;}.\31 ac1df64-1aa7-4b87-b52b-b008bed9600d,.aa255eb4-4a9f-4032-a400-4a5d4f7035c8{fill:#3d2a1b;}.aa255eb4-4a9f-4032-a400-4a5d4f7035c8,.c297b2de-63e6-40fe-906e-a7dd06ffb15e{opacity:0.5;}.d085101f-3ae7-443e-8aff-5712b59abae0{stroke-width:2.09px;}.\30 d28ad03-6ebb-45f7-892f-c834ffa57429,.\31 176d6e1-417e-4b4a-849e-7319e48a826d,.b07fa954-66a7-4e0b-9ddb-0441f4c513aa,.ff873de6-d925-4cb3-93c2-13502e714f8b{fill:#886342;}.\30 d28ad03-6ebb-45f7-892f-c834ffa57429,.d534846d-03a7-479c-a287-47ae153c00b8,.db3c4265-4151-4986-9f58-1944ee2c9902{opacity:0.4;}.\39 290cd91-1fa9-44c8-9964-46cbed0af83c,.d534846d-03a7-479c-a287-47ae153c00b8{fill:#71553b;}.\34 aeb93ec-ae07-44aa-9c28-618c3c3da0b4,.\34 f4ec164-cf40-4d91-9144-546f33f59934{fill:#87674d;}.\30 b8bcaa0-5c60-4ba3-a125-a6c59e3c348a,.\34 f4ec164-cf40-4d91-9144-546f33f59934{opacity:0.33;}.d0719335-948d-4f0b-85dd-a02b08bedde9{opacity:0.9;}.\31 176d6e1-417e-4b4a-849e-7319e48a826d{opacity:0.61;}.\30 51f3075-351b-45f1-8873-dcfd28b2a453{fill:#a8754c;}.a0543e4f-1e02-4378-b4eb-839e9f2d54da{opacity:0.7;}.ff873de6-d925-4cb3-93c2-13502e714f8b{opacity:0.3;}.\38 b5a3dca-356e-4bfb-aed1-7351ab3309ce{fill:#be9a7c;}
+
+/* air card */
+
+
+.\39 24e8020-7ad8-4a70-959f-3091bb0d1110{isolation:isolate;}.\35 4832541-f759-483e-81f9-7ebd17a21dd5{fill:#eae1b2;}.\35 c446ab5-cacb-4a37-935b-86bcc4d50a90{fill:#542d1b;}.\30 48a2fcd-df0f-42c6-a6e3-7a844877c25d,.\33 78a9c72-b94e-4126-a385-d3a3bc795881,.c4389909-2ba7-4c11-9568-2f4211d8205e{fill:none;}.\33 78a9c72-b94e-4126-a385-d3a3bc795881{stroke:#fefbdf;stroke-width:7px;}.\30 48a2fcd-df0f-42c6-a6e3-7a844877c25d,.\31 7bd4def-4cbe-44a7-9c76-6af95fe599e1,.\33 78a9c72-b94e-4126-a385-d3a3bc795881,.b9a7d751-cadf-4cc4-b20e-28e11b24f51d,.c4389909-2ba7-4c11-9568-2f4211d8205e{stroke-miterlimit:10;}.\34 ec7b329-7910-4033-a639-d3d4896d63e6{fill:#603316;}.\33 7610ffe-cedc-4650-a390-82f6aadaf492{fill:#533914;mix-blend-mode:color-burn;}.\33 7610ffe-cedc-4650-a390-82f6aadaf492,.\39 a26716f-1ea4-45d7-a9bd-50feb37b1ece,.c4389909-2ba7-4c11-9568-2f4211d8205e{opacity:0.1;}.b3e72e3a-fb11-47e4-bbfe-01b8f7f3beaf{fill:#eec21b;}.c7246bd1-9040-4601-b723-e178da2e035e{fill:#ffcf02;}.\31 ca47229-b3d7-45af-8e60-5cb22a9b2ff9{fill:#fff;}.\37 998063d-bcb6-45cc-adc1-90647508a513{fill:#231f20;}.a530d19f-b721-4a66-90c0-9c7f912a0302{fill:#ededeb;}.\30 48a2fcd-df0f-42c6-a6e3-7a844877c25d{stroke:#231f20;stroke-width:1.81px;}.\31 7bd4def-4cbe-44a7-9c76-6af95fe599e1{fill:#98aa7e;stroke:#8d9b72;stroke-width:1.35px;}.e6cb277b-aa3f-45fe-8bd3-056379b5aca0{fill:#aacd83;opacity:0.5;}.d9ce1de9-5b7e-4a09-a502-77c451d93740{fill:#2a2b27;opacity:0.05;}.c6614bda-9d9b-4bd0-8d9c-6dabbf590ed7{fill:#e4efc8;opacity:0.3;}.\31 65254b6-0b6e-418a-ab54-a81f17d193dc{fill:#975e8b;}.\31 65f9ad9-c389-4790-b7a7-9e6596b468ed{fill:#805277;}.\37 a91e33b-6ef1-43a4-b61a-d8dd7e0ed3fa{fill:#5d174e;}.\31 f27bf52-953e-4ed1-a0f2-a12c60475929{fill:#ed196f;}.f874d337-78eb-4b1d-9b53-a7468f2f9c20{fill:#c51d63;}.\32 548625f-dd98-4d52-b9a0-ecb1840b3a67{fill:#f2f2f3;}.d1511f91-e179-4a75-af74-8cc792d0f865{fill:#7ebce7;}.\34 45c74aa-11eb-4aa2-b480-765a96354e76{fill:#1c0b42;}.b9a7d751-cadf-4cc4-b20e-28e11b24f51d{fill:#bc6dac;stroke:#b75aa3;stroke-width:0.83px;}.c4389909-2ba7-4c11-9568-2f4211d8205e{stroke:#5d174e;stroke-width:2.5px;}.\30 49f4f51-d1ad-4e63-b16c-2666c10ed3e6{fill:#662163;}.\35 2371b93-ec62-418b-a8c4-7b61d16dad97{fill:#420e42;opacity:0.4;}.\34 afdb8a6-1547-4cc0-aa51-eb7f9ab31b40{fill:#faf068;}.\37 6bcf687-8b04-46ed-b631-b0401ebb2b39{fill:#f2df2d;}
+
+/* water card */
+
+
+.b92ae957-cbda-4fcf-be5f-d17c6ee43acd{isolation:isolate;}.\37 c6f4251-639d-44bb-aac0-9eda3375c9cb{fill:#eae1b2;}.\31 486a4b6-96ae-42b6-ac6b-d1aad48063fa{fill:#542d1b;}.\33 96a5f95-c387-404d-8a58-9f640a7de9f5{fill:none;stroke:#fefbdf;stroke-width:7px;}.\33 96a5f95-c387-404d-8a58-9f640a7de9f5,.\37 e09676a-5e2a-4e70-a9cf-903d8421b2fb,.\38 d3ef204-5072-4df3-977f-be532615c89b,.\39 48d6669-f89f-40e3-874a-ea460f0b8c4f,.\39 9793cc8-0b7f-42f5-ab1b-4d35e06b2ce6,.bfd92aa6-ce61-47f0-8f66-e99d9844d61f,.cfa23a3b-44e1-4a22-8a43-ecbab1c3f9c7,.f68f8e23-813b-497b-943d-fb0397d64cb6{stroke-miterlimit:10;}.\33 ef508b3-3a57-4fac-a0d6-fe69b1b86274{fill:#603316;}.\38 3049804-ac53-494b-aac9-2b5e265d6829{fill:#eec21b;}.ce48639e-c042-4b11-b114-be5ba6e875b6{fill:#ffcf02;}.\39 ba718ff-e974-4f1d-8c0d-150bb7168151{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.bb6f36a0-bb87-4680-9294-ce2e25bd5b25{fill:#31aae1;}.\31 20cc3ed-781a-4528-b673-185b289d8d4e{fill:#010101;}.\33 8b491ad-ec26-40e7-b7de-216871827e23{opacity:0.72;}.\32 82baa0c-e327-4398-8759-46b1eb83c489{fill:#64cdf6;}.e23f19dc-0fde-4a7b-b9d1-be370b116bf2{fill:#2d95d2;}.bfd92aa6-ce61-47f0-8f66-e99d9844d61f{fill:#249fd6;stroke:#2e3192;stroke-width:1.21px;}.cfa23a3b-44e1-4a22-8a43-ecbab1c3f9c7,.eb257f43-055f-441f-9d4b-65abe2be5796{fill:#53aac9;}.cfa23a3b-44e1-4a22-8a43-ecbab1c3f9c7{stroke:#518ead;stroke-width:1.09px;}.\37 742d31b-19ff-48dc-b235-ac6363fd9e92,.d3d41a2e-d20b-4e41-a3b1-56b2a18d978a,.f32ac731-7e1b-4f88-b29b-4775d4b926e3{fill:#5591af;}.d78b0fae-3d27-4404-9fce-cef9b286e970{fill:#4ca7bc;}.e9efa128-e5c6-4cac-9d0d-d86d5c95edf3{fill:#52b8cf;}.\32 30044e9-560e-4afb-beda-38fdbf59ff87{fill:#1d88c9;}.d3d41a2e-d20b-4e41-a3b1-56b2a18d978a{opacity:0.7;}.f32ac731-7e1b-4f88-b29b-4775d4b926e3{opacity:0.5;}.\37 e09676a-5e2a-4e70-a9cf-903d8421b2fb,.\38 d3ef204-5072-4df3-977f-be532615c89b,.\39 48d6669-f89f-40e3-874a-ea460f0b8c4f,.\39 9793cc8-0b7f-42f5-ab1b-4d35e06b2ce6,.f68f8e23-813b-497b-943d-fb0397d64cb6{stroke:#dcdbdb;}.\37 e09676a-5e2a-4e70-a9cf-903d8421b2fb{stroke-width:0.73px;fill:url(#40e7cad5-12f7-45c4-a7e5-a225b0953cc3);}.c78aff96-2374-4aa3-8666-bdaafc32143a{fill:url(#59c0c873-0e44-4a2d-a403-218446a6eb52);}.\36 913ffac-ee45-4de6-8cbf-178e576268dd{fill:#2d2d2d;}.\34 7c59663-82db-45e8-b95e-e1816d3070e2{fill:#fff;}.f68f8e23-813b-497b-943d-fb0397d64cb6{stroke-width:0.56px;fill:url(#b080e20b-cb54-4742-9b32-fe6adaa15775);}.c1f99acc-f4fe-403d-9234-b967793caacc{fill:url(#28af6d8e-8dab-4f00-ac70-48598a8025ea);}.\39 9793cc8-0b7f-42f5-ab1b-4d35e06b2ce6{stroke-width:0.37px;fill:url(#a9f678ee-4ddf-492e-b02d-1a3c161d94ea);}.\37 e3b17ea-4c32-4f8c-9fe7-306a9ac20cbf{fill:url(#0b6cdb55-a99b-44be-980c-a3456602a124);}.\39 48d6669-f89f-40e3-874a-ea460f0b8c4f{stroke-width:0.65px;fill:url(#e05ff6da-76be-4bf0-ac7e-b53bf720f201);}.\39 9821567-0e1f-4edf-8eb7-10671e2e4595{fill:url(#bc65904e-b941-41d8-a0cf-e37923404874);}.\38 d3ef204-5072-4df3-977f-be532615c89b{stroke-width:0.25px;fill:url(#b12335a8-ee3b-4127-824a-d307a7140ba9);}.\34 4769072-5049-44f6-a35c-2108ebde9a8a{fill:url(#c8ebafe3-392b-4db4-8ece-b9a1b2ed79c5);}
+
+/* Locked Cards */
+.\32 361f8a8-e917-4881-a365-7ea7af1d2d40{fill:#eae1b2;}.\32 5ccff5c-334e-4ef1-ba07-c20181351a9c{fill:#542d1b;}.f8f491fb-a81a-4db0-bc78-fb865807202a{fill:none;stroke:#fefbdf;stroke-miterlimit:10;stroke-width:7px;}.ebc02c09-d8ac-46c5-a06f-0b9e51ed4ea9{font-size:200px;fill:#23120a;font-family:Montserrat-Bold, Montserrat;font-weight:700;}
+
+
+/* eigen css */
+#MonsterCollectionBG {
+    width: 100vw;
+    position: absolute;
+    background-color: #fffadc;
+    -webkit-box-shadow:inset 0px 0px 0px 10px #7f461e;
+    -moz-box-shadow:inset 0px 0px 0px 10px #7f461e;
+    box-shadow:inset 0px 0px 0px 10px #7f461e;
+}
+
+/* Monster kaarten */
+
+.Collectioncards {
+    width: 25%;
+    float: left;
+    margin-left: 6.2%;
+    margin-bottom: 3%;
+}
+
+.filterDisplayNone {
+    display: none;
+}
+#wrapperMonsterCollectionBar {
+    position: relative;
+    height: 200px;
+}
+
+#cameraIcon {
+    width: 10%;
+    max-width: 50px;
+    margin-left: 6.6%;
+    position: absolute;
+    left:0;
+    margin-top: 25px;
+}
+/* active style */
+#cameraIcon:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#cameraIcon:active .a47411ee-70b6-4ab3-9423-fc22511ffd0e {
+    fill: #eca521;
+    outline: none;
+}
+#cameraIcon:active .\35 7bb8bf6-1463-4bbd-a65e-99b91d99aa50 {
+    fill: #d87227;
+    outline: none;
+}
+
+
+#filterIconen {
+    width: 70%;
+    max-width: 300px;
+    position: absolute;
+    top: 100px;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+}
+
+.collectionText {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #603913;
+    text-align: center;
+    position: absolute;
+    top: 32px;
+    bottom: 50%;
+    left: 0;
+    right:0;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Active state monsterkaders */
+.Collectioncards:nth-child(1):active, .Collectioncards:nth-child(2):active, .Collectioncards:nth-child(3):active, .Collectioncards:nth-child(4):active  {
+    transform: scale(0.9);
+    transform-origin: 50% center;
+    transition-duration: 0.3s;
+}
+
+.Collectioncards:nth-child(15) {
+    margin-bottom: 50px;
+}
+
+
+/* MONSTER SPECS SVG */
+/* STEEN SPECS */
+
+
+.\32 0e23709-7da9-49f4-a6d1-9b22a31bdb2c{isolation:isolate;}.\32 976e771-08f0-4438-8ab6-8e3ba2f1fbc2{fill:#a57b36;}.\31 4f5539c-c473-4d65-9834-e96e5da315c2,.\32 976e771-08f0-4438-8ab6-8e3ba2f1fbc2{opacity:0.6;}.c777e2bf-fa5d-4b1f-ac8a-10e29c4f3e0b{fill:#d8b266;opacity:0.75;}.\31 4f5539c-c473-4d65-9834-e96e5da315c2{fill:#030302;}.\37 6263a8d-4546-460f-af68-fe642bee3c7c{fill:#23150b;}.ff2dae0a-88a0-4723-b043-94ad0864690d{fill:#d22627;stroke-width:0.57px;}.\37 7ebc7d1-b4f9-4002-8c31-7d6112fd00af,.ff2dae0a-88a0-4723-b043-94ad0864690d{stroke:#000;stroke-miterlimit:10;}.e9b501e3-9df2-4272-ae42-0b04ddda4bfd{fill:#e54a52;}.\37 b11e4a5-049e-483a-8eac-2129f2a6c4bc{fill:#231f20;}.\32 eebc43c-3d4c-466a-a8fa-3931f9294e70,.\39 cc41743-eeb2-4755-aa67-858a08142666,.f36d40b4-6182-4d81-883f-11a316a7e82f{opacity:0.2;}.f36d40b4-6182-4d81-883f-11a316a7e82f{fill:url(#c9130d24-c676-4df3-973f-7fbbdf5e92cd);}.\35 7b918cd-1fd6-4eab-8c35-940ee15aced4{fill:#5e4730;}.\34 5f86007-d30d-4143-af1f-c9a50ecd7c35{fill:#3e2514;}.\31 04cdd00-5362-46b9-9d68-1814053e3c21,.\37 7ebc7d1-b4f9-4002-8c31-7d6112fd00af{fill:#553d29;}.\33 b37e51f-d3c4-4f9b-8987-ec921260b4e0,.e506b106-1907-4bfb-bdf8-e86811a71789{fill:#3d2a1b;}.dee0cbb5-f37b-4a51-9ac5-d4d4ef2763e1,.e506b106-1907-4bfb-bdf8-e86811a71789{opacity:0.5;}.\37 7ebc7d1-b4f9-4002-8c31-7d6112fd00af{stroke-width:2.09px;}.\32 553ff64-32e0-4cc9-bd9a-89102d3c0f57,.\33 da74ac3-3ec5-41f2-9fa2-93c6315f4559,.\35 1938307-c933-4a9a-95d5-381364d34f2a,.bca8e0dc-c50c-43ff-a594-b4ddcc8d88ac{fill:#886342;}.\32 4a7bf7a-78ab-4625-8043-32d0b2895f4d,.bca8e0dc-c50c-43ff-a594-b4ddcc8d88ac,.d259c51b-7a99-4474-bfae-40b161c9f63b{opacity:0.4;}.\34 97d4b4b-f853-419f-bb50-d4c6624ae1ba,.d259c51b-7a99-4474-bfae-40b161c9f63b{fill:#71553b;}.\31 68c3c0c-500e-4db2-8a78-cc5039799031,.b9e55a18-6b6d-4999-ad97-9c9e8c2e1891{fill:#87674d;}.\36 610c6c6-5155-4b58-9461-6c50c68b7dd3,.b9e55a18-6b6d-4999-ad97-9c9e8c2e1891{opacity:0.33;}.eec7793c-8c86-45cb-89cf-d018c9a634a2{opacity:0.9;}.\33 da74ac3-3ec5-41f2-9fa2-93c6315f4559{opacity:0.61;}.\30 9d5d827-6b78-4dd3-9ce2-e97933bd1467{fill:none;}.\32 eebc43c-3d4c-466a-a8fa-3931f9294e70{fill:#a8754c;}.eccdffb2-93b7-4305-9f13-730314cee3bb{opacity:0.7;}.\32 553ff64-32e0-4cc9-bd9a-89102d3c0f57{opacity:0.3;}.\39 cc41743-eeb2-4755-aa67-858a08142666{fill:#be9a7c;}.\31 4012a43-3160-4ed5-b180-2d84c250e784{fill:#603316;}.d0746098-1298-4d49-b4b5-82e673bf3c45{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\31 76b58fe-2dbd-4ebf-8737-5ef1919cbfd6{fill:#eec21b;}.a551bb88-65e2-4657-a38e-63f7440a4f32{fill:#ffcf02;}.c6600533-2e4b-434a-934e-2bc4a10e4468{fill:#c2c1c1;}.\33 4173c39-35ec-41ad-ab51-15045335f3c4,.\34 2193ad6-bc51-4094-ae81-b2d8e63e37e9,.ba3ca1c7-8ce5-4931-821c-3e14a4cfd9d8{fill:#010101;}.d17a78aa-189e-45c5-ab5e-7f408ed4da9d{fill:#949494;}.\31 e04a882-1379-4d5a-9b8d-eddfaddc8db8{fill:#757676;}.ad3ebc59-d9f1-4311-9210-72bfcdaccc9b{font-size:55px;fill:#2d2d2d;font-family:Montserrat-Bold, Montserrat;}.ad3ebc59-d9f1-4311-9210-72bfcdaccc9b,.ba3ca1c7-8ce5-4931-821c-3e14a4cfd9d8{font-weight:700;}.\36 cbab901-b552-43cb-9d81-2a2e3652f037{letter-spacing:-0.01em;}.\38 5862b0e-24ff-4901-843b-ed9d3a31f967{letter-spacing:-0.02em;}.\39 7319451-5f47-43e0-9a4c-ac73d12e00bb{fill:#d3d3d3;}.\32 de0aab8-281b-4f6b-a70e-b1534d64f902{fill:#e2e2e2;}.\38 ee1d15f-958a-4f58-8d5a-3a13c4ec73eb{fill:#ababab;}.\37 e5b7976-9a5f-4fe0-96f1-6dc80d7d7d86{font-size:84.67px;font-family:Montserrat-Regular, Montserrat;}.\33 faf572f-c4b6-4f5f-bb7b-d67ae78d22b9,.\37 e5b7976-9a5f-4fe0-96f1-6dc80d7d7d86{fill:#444545;}.\34 93c6009-40a5-4152-ae29-92c731b82ea7{fill:#37190f;}.\33 4173c39-35ec-41ad-ab51-15045335f3c4{font-size:41.11px;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.03em;}.ba3ca1c7-8ce5-4931-821c-3e14a4cfd9d8{font-size:29.04px;font-family:HelveticaNeue-Bold, Helvetica Neue;letter-spacing:0.05em;}.\38 178e75f-1d12-4c8a-8991-ffc65e5f38bd{fill:#7f471e;}
+
+/* VUUR SPECS */
+
+
+.\34 e5f77e9-1379-417f-bb2c-6011013ef6f5{isolation:isolate;}.c1ca5ae3-01d6-4008-b67d-b5148a7c4c35{fill:#a57b36;opacity:0.6;}.\36 e85e1d4-5546-4263-852c-2291b1e6be38{fill:#d8b266;opacity:0.75;}.b8b0b66b-fef4-410c-9e61-51284b4d9b11{fill:#ee2937;}.\34 3e4518f-b25d-4d89-9aee-c41c246a3ea8{fill:url(#e0b6a8b8-a9e5-4600-ab4d-643b1eb71c8e);}.c7de5f28-dbe0-43fe-a62e-9ff39bb06224{fill:url(#c1efa5aa-409f-4f9b-a06e-9a12beab825b);}.\34 5a445d3-78e1-4cc6-8141-c62cab164df7{fill:url(#69ccabf0-4a7b-4a1d-83e6-40b020fc856a);}.\31 62480c8-27cf-49ba-b7cd-11d9e24761c7{opacity:0.5;fill:url(#109d3eee-e952-42f8-9c03-270f3eeeee78);}.a2560242-21f8-4c21-bc1c-58027ddc4c23{stroke:#dcdbdb;stroke-width:0.72px;fill:url(#ac722d30-06ec-4529-a143-2a8e3ff7b0f7);}.a2560242-21f8-4c21-bc1c-58027ddc4c23,.fe8b859d-8403-49c3-8de0-23db49dbc71e{stroke-miterlimit:10;}.\35 11412d9-3f82-45b2-ae02-64a507b6c639{fill:url(#690cec0e-8d0b-4994-86d4-992a739dff5e);}.\32 370220c-3b51-4867-85a7-89fce62e2993,.\35 ac20fc6-372e-48e9-afd4-18026651cc6e{fill:#2d2d2d;}.\33 992de3c-d676-4e3f-b250-cfe40005ed99{fill:#fff;}.fad49b27-5dbd-441d-a8d4-e780ed38cde2{fill:#ffc709;}.\31 5513ada-b68b-4992-8ad8-14c6a5823d77{fill:url(#bf9506f9-b2c6-4b87-85aa-e81a189599ac);}.\39 855edd6-106e-4b1b-a983-3ddcff8983b0{fill:url(#471f4884-f547-4de6-a555-6cde6b6d98fc);}.\36 ecc5efc-f201-4473-90cd-f4ca2b4c9a36{fill:url(#a27c7ade-e554-40ee-b396-29d35d0998e1);}.\34 9274eac-e1f0-4d90-90a0-4972337dd233{fill:url(#49889877-8159-46e2-9263-237eb575c8f9);}.c25aa6c3-7505-479a-b90b-7d2e0b62cec2{fill:#603316;}.\35 f95adc1-2947-44a4-a49b-095090ef8782{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\37 2ea7fb8-98a2-47ed-9bc5-080a3ae8f6cf{fill:#eec21b;}.\32 b2a0fe1-8f67-49a6-923b-11fda60a00db{fill:#ffcf02;}.fe8b859d-8403-49c3-8de0-23db49dbc71e{fill:#f04e23;stroke:#231f20;stroke-width:2px;}.c9f4d9d7-77e7-4478-bf56-b2e9448d65a8{fill:#f47421;}.\37 9af8d95-0919-481d-a6ef-48488d9df249{fill:#fec014;}.\32 370220c-3b51-4867-85a7-89fce62e2993{font-size:55px;font-family:Montserrat-Bold, Montserrat;}.\32 370220c-3b51-4867-85a7-89fce62e2993,.\38 375d619-ac41-4855-ab3c-8ed66400a51f{font-weight:700;}.\39 1e22619-8c96-4e46-90b9-dcba4e5e04c5{letter-spacing:-0.01em;}.\34 c43b2f5-7816-4f72-b7ab-5c3e33af8636{fill:#d3d3d3;}.\31 0bbf906-4fb8-4e0c-88e4-43aee7704ab9{fill:#e2e2e2;}.b00f1ba1-3681-4a8d-b69f-2584af4fe6d0{fill:#ababab;}.\31 d8eb4c1-ed46-44d7-8571-627b4ddc20c5{font-size:84.67px;font-family:Montserrat-Regular, Montserrat;}.\31 d8eb4c1-ed46-44d7-8571-627b4ddc20c5,.\34 25f630a-95ff-4546-959d-f0a336507668{fill:#444545;}.\34 140d787-eca0-4da1-a6e5-8d63d626fcb6{fill:#37190f;}.\32 96f0402-f710-443b-a8fb-ad8fa64a5b75{font-size:41.11px;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.03em;}.\32 96f0402-f710-443b-a8fb-ad8fa64a5b75,.\38 375d619-ac41-4855-ab3c-8ed66400a51f{fill:#010101;}.\38 375d619-ac41-4855-ab3c-8ed66400a51f{font-size:29.04px;font-family:HelveticaNeue-Bold, Helvetica Neue;letter-spacing:0.05em;}.\38 6da8f19-7174-4c7c-8bc0-f63cbf7a33e4{fill:#7f471e;}
+
+/* water */
+
+
+.d5ffeedb-e35e-4029-88ab-9471f131ab9c{isolation:isolate;}.\33 e382153-3cbc-4dca-ab4e-067b1238a02d,.\37 d11e50d-9047-447b-896f-2f4d303be9c0{fill:#a57b36;}.\33 e382153-3cbc-4dca-ab4e-067b1238a02d{opacity:0.6;}.\32 fbac1e4-3528-4206-a73c-e266ac98faac{fill:#d8b266;opacity:0.75;}.\37 d11e50d-9047-447b-896f-2f4d303be9c0{opacity:0.25;}.ed3e4b02-8a5c-4940-9dc5-4490e9728fcf{fill:#249fd6;stroke:#2e3192;stroke-width:1.21px;}.\30 0c8dd2c-83f8-409c-928d-44a4cf74001f,.\31 701636d-1c3a-44f8-b3a1-0e40cabd63f5,.\33 0aead7e-18e9-46a1-9cf7-360057de1ba5,.\39 a581e64-58a9-44b0-a74d-93650069cff4,.d57ffa25-fa4c-448d-913e-f37c6482ece7,.eb6b634b-e928-4625-bde4-d5f5d3b8691d,.ed3e4b02-8a5c-4940-9dc5-4490e9728fcf{stroke-miterlimit:10;}.\31 701636d-1c3a-44f8-b3a1-0e40cabd63f5,.eb1e23c5-e1b1-4378-b009-21e6aaae1c06{fill:#53aac9;}.\31 701636d-1c3a-44f8-b3a1-0e40cabd63f5{stroke:#518ead;stroke-width:1.09px;}.\32 b02c9d6-c628-4a2e-b913-3e20cd66a663,.\33 950d948-cbd1-46ca-9c55-405c246f6ac9,.\36 11411c2-eb05-4063-86be-518c3249db46{fill:#5591af;}.\39 263583e-6c94-4154-a47f-64a30c9cf0a7{fill:#4ca7bc;}.\37 c7aa101-44d4-4314-a015-e4738a906379{fill:#52b8cf;}.\33 d252f2c-b213-4840-a1cf-89af0ee6e3b0{fill:#1d88c9;}.\32 b02c9d6-c628-4a2e-b913-3e20cd66a663{opacity:0.7;}.\33 950d948-cbd1-46ca-9c55-405c246f6ac9{opacity:0.5;}.\30 0c8dd2c-83f8-409c-928d-44a4cf74001f,.\33 0aead7e-18e9-46a1-9cf7-360057de1ba5,.\39 a581e64-58a9-44b0-a74d-93650069cff4,.d57ffa25-fa4c-448d-913e-f37c6482ece7,.eb6b634b-e928-4625-bde4-d5f5d3b8691d{stroke:#dcdbdb;}.\39 a581e64-58a9-44b0-a74d-93650069cff4{stroke-width:0.73px;fill:url(#98b9df9b-01d8-4a12-ac73-0dac47ceb8bf);}.\38 50f42be-e938-456e-9db0-9efbc9a29f79{fill:url(#bb7adc43-33c5-4727-aed9-91d0e2763b3d);}.\32 a559efd-6bbe-4dce-9f1c-2faa435a9a93,.f94358a3-6c45-41f5-a04e-1f9a4c8aaf04{fill:#2d2d2d;}.\30 95ec184-176b-4034-913f-cdc18d86ebeb{fill:#fff;}.\30 0c8dd2c-83f8-409c-928d-44a4cf74001f{stroke-width:0.56px;fill:url(#4fcaf136-6e60-4d7a-80cc-58bc3aa937ab);}.\34 3ad079d-9753-41c3-887c-4e06e5cad392{fill:url(#cf251bb4-aaf0-430b-b131-adc56a0324b8);}.eb6b634b-e928-4625-bde4-d5f5d3b8691d{stroke-width:0.37px;fill:url(#656b45d7-c7ba-4439-b83b-f2c32ba5736b);}.\33 558a4d1-8581-4552-9df6-0c4b46548b96{fill:url(#a97e53f4-0889-4ffa-a083-1f479b87e24d);}.\33 0aead7e-18e9-46a1-9cf7-360057de1ba5{stroke-width:0.65px;fill:url(#c6ac3953-a59a-4d21-b7d8-e29f85e32937);}.\38 091b004-a28f-438c-8a4a-e9eba22723fc{fill:url(#64f40117-b990-4197-8a00-2758b4f9029e);}.d57ffa25-fa4c-448d-913e-f37c6482ece7{stroke-width:0.25px;fill:url(#cdf2ae5b-d86c-463f-bf0b-16e5f44550cf);}.\33 5ffaa4c-2764-40da-b5f5-93bf3f2e3886{fill:url(#c1c4c4f5-27b6-415d-975f-068f56426d84);}.\39 7d88dac-c7fb-4c45-988f-8e61c5df478a{fill:#603316;}.\32 4765c8e-072e-480d-8580-0d996dfea9cb{fill:#eec21b;}.\35 a0daad1-b522-4a54-9f2f-0f0981fa093b{fill:#ffcf02;}.\32 6fc1ad8-fa8d-4c89-8ad4-9b7544271374{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\35 19c586e-212f-4d50-aad0-833a9647e451{fill:#31aae1;}.a3e31242-d0d4-4e30-99e1-6e143bd33785,.ac705427-6cd5-4e7e-af72-1b8dea5a88b8,.ae94404b-b52c-4e67-9c05-105b12b9fe2f{fill:#010101;}.\39 d3310d6-aefd-4cf1-aad0-4b04e3e67c18{opacity:0.72;}.ca02e763-c380-4724-87e8-a232f3dcb8ab{fill:#64cdf6;}.\37 171ca44-eba6-478c-b265-3724c5a33eb9{fill:#2d95d2;}.\32 a559efd-6bbe-4dce-9f1c-2faa435a9a93{font-size:55px;font-family:Montserrat-Bold, Montserrat;}.\32 a559efd-6bbe-4dce-9f1c-2faa435a9a93,.ae94404b-b52c-4e67-9c05-105b12b9fe2f{font-weight:700;}.c818630b-848e-42f8-b652-e3d298df9e6e{letter-spacing:-0.05em;}.aa45355f-97ce-4211-87c5-bce4ee0ccde2{fill:#d3d3d3;}.\37 b1091ac-76d6-4653-9f1e-ecef744f2e10{fill:#e2e2e2;}.\38 f96c2a8-1c60-4c0b-9161-a8a906213f19{fill:#ababab;}.\35 9864c36-0c36-4d46-8747-fdf501cde433{font-size:84.67px;font-family:Montserrat-Regular, Montserrat;}.\35 9864c36-0c36-4d46-8747-fdf501cde433,.fecb7ad5-955a-4450-86b7-97f9adfeb156{fill:#444545;}.\36 0c6d1a1-6457-4768-b426-2af98a0e4637{fill:#37190f;}.a3e31242-d0d4-4e30-99e1-6e143bd33785{font-size:41.11px;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.03em;}.ae94404b-b52c-4e67-9c05-105b12b9fe2f{font-size:29.04px;font-family:HelveticaNeue-Bold, Helvetica Neue;letter-spacing:0.05em;}.\39 23ac8d7-a0f5-4f7d-8473-dafd2cf3c5d9{fill:#7f471e;}
+
+/* Lucht */
+
+
+.\38 59eef12-a75e-45b6-8fe2-6f6e6026a5c5{isolation:isolate;}.\33 0add1bc-dc81-4fa1-a402-4f15fc0a9f5a,.\35 064d12c-c6a7-4bac-8829-322c90553211{fill:#a57b36;}.\33 0add1bc-dc81-4fa1-a402-4f15fc0a9f5a{opacity:0.6;}.\33 116d639-39b3-4c34-9bb8-e2bb376856c0{fill:#d8b266;opacity:0.75;}.\31 543b4c7-502d-476f-a684-09e53b9b7c12,.\39 22c0a79-90cb-4216-b92b-aafb36f3cdce{fill:none;}.\39 22c0a79-90cb-4216-b92b-aafb36f3cdce{stroke:#231f20;stroke-width:1.81px;}.\31 543b4c7-502d-476f-a684-09e53b9b7c12,.\36 df7a0f5-cd44-4d19-b23e-c45fb790146d,.\39 22c0a79-90cb-4216-b92b-aafb36f3cdce,.a3f0802d-736c-4e8e-8ae7-eb6956967a91{stroke-miterlimit:10;}.\36 df7a0f5-cd44-4d19-b23e-c45fb790146d{fill:#98aa7e;stroke:#8d9b72;stroke-width:1.35px;}.ce3a764d-a1fc-4333-b68d-487c383f0870{fill:#aacd83;opacity:0.5;}.\35 5d4fcfd-cc56-403a-918a-397619ce59eb{fill:#2a2b27;opacity:0.05;}.\34 9622966-812a-4cde-84da-e1e0e256fb5b{fill:#e4efc8;opacity:0.3;}.\36 10685e5-a03d-4874-8969-ea518d632774{fill:#975e8b;}.\32 e45e3f4-d253-4803-9fe1-c7d3e551f673{fill:#805277;}.\31 543b4c7-502d-476f-a684-09e53b9b7c12,.\38 a109f63-0cd0-43b0-bbfa-1270f3be9033,.\39 b9fef0a-8a80-4a06-aae4-f32443076287{opacity:0.1;}.\31 5b1ba16-9b2e-4465-bfdf-41aed4154a28{fill:#5d174e;}.ee516f1d-9c53-426e-8bb6-d71e20442af6{fill:#ed196f;}.\32 54725e5-c1fd-47b5-8d24-d123ac80913f{fill:#c51d63;}.ea9f8c6b-ed15-4673-8698-1c2e37faa6ce{fill:#f2f2f3;}.\36 4689447-a87a-4833-8b7e-e660a8c25a0f{fill:#7ebce7;}.fbfb95e3-faf1-4b36-9442-a39fa25ddd1b{fill:#1c0b42;}.\33 d23b3d2-5168-4267-8249-2e4d8756feac{fill:#fff;}.a3f0802d-736c-4e8e-8ae7-eb6956967a91{fill:#bc6dac;stroke:#b75aa3;stroke-width:0.83px;}.\31 543b4c7-502d-476f-a684-09e53b9b7c12{stroke:#5d174e;stroke-width:2.5px;}.c1597fc3-3b98-4832-b7db-b5b6db7366ee{fill:#662163;}.\34 9170a1a-b372-4421-8a9b-b1c5f53fe591{fill:#420e42;opacity:0.4;}.\30 6e71c99-a45d-4415-adc1-6a27b0627894{fill:#faf068;}.d53daf13-d0d4-4c16-81f5-535c64ae9985{fill:#f2df2d;}.\35 064d12c-c6a7-4bac-8829-322c90553211{opacity:0.25;}.\36 5c4cf7a-7bf3-45bb-a81d-e62e22d74815{fill:#603316;}.\39 b9fef0a-8a80-4a06-aae4-f32443076287{fill:#533914;mix-blend-mode:color-burn;}.fa816de9-97e2-471d-a141-e723636a46f9{fill:#eec21b;}.a93988ac-b470-49b8-8e2a-3440ba4ef535{fill:#ffcf02;}.\39 93ca9b1-c672-46e0-b722-ddd8522adb99{fill:#231f20;}.\32 68c8d95-409c-44fd-90ff-1b0d7cd21d4f{fill:#ededeb;}.\30 5f24bc3-0e35-463e-9cac-91c74b793037{font-size:55px;fill:#2d2d2d;font-family:Montserrat-Bold, Montserrat;}.\30 5f24bc3-0e35-463e-9cac-91c74b793037,.f0ec7951-2758-426d-93e6-f9e093f136f5{font-weight:700;}.\33 123729f-a5c9-4bff-a124-9a7ab1295669{letter-spacing:-0.06em;}.\30 0544c2d-4ce3-4d9c-8428-5a7138f5ef0e{letter-spacing:-0.01em;}.\38 ec52efc-381c-49ec-87fa-56ccef4d5094{fill:#d3d3d3;}.\33 3bc8654-b7b1-415b-a507-dfaf27831b1f{fill:#e2e2e2;}.\32 70b3b3c-25b0-4593-be49-989d2a701a1d{fill:#ababab;}.\38 facaddb-2098-457e-baee-85dcf9829bca{font-size:84.67px;font-family:Montserrat-Regular, Montserrat;}.\38 facaddb-2098-457e-baee-85dcf9829bca,.bdfaa4a1-3a2e-4d6b-a491-38fbf3ac322b{fill:#444545;}.fd3655b2-e63d-4c49-b0c0-3d40b5ef609c{fill:#37190f;}.d15f7eed-08fe-43c0-91d4-cc95b9e47889{font-size:41.11px;font-family:HelveticaNeue-Medium, Helvetica Neue;letter-spacing:0.03em;}.d15f7eed-08fe-43c0-91d4-cc95b9e47889,.f0ec7951-2758-426d-93e6-f9e093f136f5{fill:#010101;}.f0ec7951-2758-426d-93e6-f9e093f136f5{font-size:29.04px;font-family:HelveticaNeue-Bold, Helvetica Neue;letter-spacing:0.05em;}.\32 3a83c3c-869e-44d7-b7d2-19025cbdf3c5{fill:#7f471e;}
+
+/* pijlen */
+/* links */
+.\30 0db6730-036f-4fbc-a103-5ecfd785b1bf,.\32 bc0f8d1-063e-48bb-9b88-20169894169a{fill:#e8a423;}.\38 fa7c259-d49d-45ec-9380-27a905465ef4{fill:#fdc016;}.\30 0db6730-036f-4fbc-a103-5ecfd785b1bf{opacity:0.5;}.ce228222-c4c8-4679-a908-684f66f38c9c{fill:#5b3717;}
+
+/* rechts */
+.df0774f1-8c0d-4c8e-96da-a60932b9bf8c,.fc034136-4ce4-4916-8fab-de45679ab95f{fill:#e8a423;}.\31 832d2cc-51d1-42d1-80e0-38d0e761f3fa{fill:#fdc016;}.df0774f1-8c0d-4c8e-96da-a60932b9bf8c{opacity:0.5;}.\34 7316384-6416-4f1d-b001-b9fa1209f8bb{fill:#5b3717;}
+
+/* MONSTER SPECS EIGEN CSS */
+/* backgrounds*/
+#steenMonsterBG {
+    background-image: url(links/steenBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#vuurMonsterBG {
+    background-image: url(links/vuurBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#waterMonsterBG {
+    background-image: url(links/waterBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#luchtMonsterBG {
+    background-image: url(links/luchtBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#MonsterSpecs {
+    position: absolute;
+    width: 65%;
+    max-width: 300px;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    top: 100px;
+}
+
+#linkerPijl {
+position: absolute;
+width: 10%;
+max-width: 70px;
+left:0;
+margin-left:15px;
+top: 37%;
+}
+
+#rechterPijl {
+position: absolute;
+width: 10%;
+max-width: 70px;
+right: 0;
+margin-right:15px;
+top: 37%;
+}
+
+
+/* SELECT MONSTER SVG */
+.e704a171-da20-4141-ba85-f4030ce133db{fill:#f5bb2e;}.\38 2975f6a-ba29-4696-abc3-0ffbd9852c77{fill:#483015;}.e8ff9c7f-04ce-47b1-bb69-cd8dc69ef130{fill:#db8427;}.\31 a6adcdb-eebb-4c4a-b2a4-204bfa7db631{font-size:52.55px;fill:#462d13;font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;letter-spacing:0.1em;}
+
+/* SELECT BAR */
+
+
+.\35 24045ae-37d1-475a-9473-fbc2e23b3d4c{fill:#a56127;}.\34 a047e86-6de8-4501-9881-1c0817bfc48e{fill:#483015;}.ced6c72b-1c77-46a2-9ea9-af21ee0b9d3a{fill:#2b180e;}.\30 7ad5e61-0ada-481e-b908-01d784da4c5c,.d2d55425-fa70-4899-8f98-3387a8e2ca52,.f7d43357-f0da-4026-9640-c28cb1540e57{fill:none;}.\30 7ad5e61-0ada-481e-b908-01d784da4c5c{stroke:#231f20;stroke-width:0.51px;}.\30 7ad5e61-0ada-481e-b908-01d784da4c5c,.\30 d0c663a-d219-4f09-bac6-953845bd78d1,.\30 d76cefc-5248-4447-8e28-19cc624f7211,.\33 eabe831-fcbd-412d-9f3e-ab36aa630b48,.\34 65f3410-7ba5-4570-8a6d-51eababb80b8,.\35 cac6937-349f-4563-9759-ce5a6b8e2d67,.\36 884c3c1-01b0-4bc4-a6e6-233b6bf15336,.\39 04386a6-eb2b-4acf-b77e-5a8311a2e3ca,.bcf28205-e6da-4fa3-b21c-e4b9151bd200,.cc3e5e63-8184-4b9a-b3d2-e40d3d4e33a3,.d2d55425-fa70-4899-8f98-3387a8e2ca52,.d9aa0adb-0bcd-465f-ac97-1e94e89960fa,.ec3d38e8-2be3-477c-a4e6-f05fa7b379ce,.fbd933cc-5743-4c43-ba2d-14d4df4604fe{stroke-miterlimit:10;}.\39 04386a6-eb2b-4acf-b77e-5a8311a2e3ca{fill:#98aa7e;stroke:#8d9b72;stroke-width:0.38px;}.\36 8b2034b-d51d-4d90-a1ec-d07c98598af7{fill:#aacd83;}.\30 13ae89a-50bc-4370-a95e-4fde28412f8a,.\30 2896bba-7146-4e57-9517-22188ab76ecd,.\32 f79076c-2d68-4ee2-9ebe-76d3b6e0614f,.\35 9643559-40c1-4f15-8ede-3c430845ef4b,.\36 8b2034b-d51d-4d90-a1ec-d07c98598af7{opacity:0.5;}.\31 89f65ac-bfed-4d59-a415-b8f238e512ab{fill:#2a2b27;opacity:0.05;}.\37 921f560-12b9-46f6-954a-fda8be2b9ec8{fill:#e4efc8;}.\30 55e0edb-4923-4005-9afe-a2db28945725,.\37 921f560-12b9-46f6-954a-fda8be2b9ec8{opacity:0.3;}.\38 1a6023b-e182-4526-a379-4f9443a164cd{fill:#975e8b;}.e44e9fc0-83fa-4b43-9686-b5f7716312a6{fill:#805277;}.ad9e0b26-0687-4af2-8d90-85ae0a31c1ae,.d2d55425-fa70-4899-8f98-3387a8e2ca52{opacity:0.1;}.df337f48-8c1a-4643-99a1-08032a106c9f{fill:#5d174e;}.\32 db30b4d-19ff-4fe1-8722-4ecbd084b9c6{fill:#ed196f;}.cab2adeb-c19d-4d83-8eb7-890454a3272b{fill:#c51d63;}.\32 37dd75e-29cf-4cb9-8163-f8036aa56aef{fill:#f2f2f3;}.\35 79d6b18-fd49-4c3e-863a-01b94417c408{fill:#7ebce7;}.\32 64ecbc9-d04e-4f05-a236-bb80801f481c{fill:#1c0b42;}.\36 fb8024e-317d-4c25-ad78-505628f0ee21{fill:#fff;}.\33 eabe831-fcbd-412d-9f3e-ab36aa630b48{fill:#bc6dac;stroke:#b75aa3;stroke-width:0.24px;}.d2d55425-fa70-4899-8f98-3387a8e2ca52{stroke:#5d174e;stroke-width:0.71px;}.\37 b6ca5e9-e4e3-4f9f-b63b-a2a4efbd61c4{fill:#662163;}.\32 5dc2720-a6e0-432d-ac6e-78716801fe69{fill:#420e42;}.\30 2db0ab1-ca16-4fb6-aa8a-cd7cb1c461b2,.\32 5dc2720-a6e0-432d-ac6e-78716801fe69,.\38 98f0514-71d1-45a3-89ee-fecf8ab0a2b8,.dcfd6584-e7a2-460d-95ab-101b92901e23{opacity:0.4;}.a12ee5ca-346b-425b-9831-c0b8345efe71{fill:#faf068;}.\34 bd5447b-dfeb-4d60-abe6-1a24709b4cd1{fill:#f2df2d;}.fbd933cc-5743-4c43-ba2d-14d4df4604fe{fill:#249fd6;stroke:#2e3192;stroke-width:0.28px;}.\30 d76cefc-5248-4447-8e28-19cc624f7211,.\34 a54c1c5-fc89-4e5e-84de-c740e7a9f98b{fill:#53aac9;}.\30 d76cefc-5248-4447-8e28-19cc624f7211{stroke:#518ead;stroke-width:0.26px;}.\31 a9bc6a1-bca7-4b8f-b49f-225d0143818f,.\32 f79076c-2d68-4ee2-9ebe-76d3b6e0614f,.\39 355b7fb-b4d6-4bcb-b9c2-f270f0ef51fd{fill:#5591af;}.de8481da-64e0-4ad6-9e40-57a014de6d55{fill:#4ca7bc;}.\35 73e6841-4d7d-4738-932c-4ed3b248af43{fill:#52b8cf;}.f8184b41-cbc3-49ce-8f14-f49b02592f13{fill:#1d88c9;}.\31 a9bc6a1-bca7-4b8f-b49f-225d0143818f,.\37 e2e33de-4563-4eb7-8989-46a370a151ab{opacity:0.7;}.\30 d0c663a-d219-4f09-bac6-953845bd78d1,.\35 cac6937-349f-4563-9759-ce5a6b8e2d67,.\36 884c3c1-01b0-4bc4-a6e6-233b6bf15336,.cc3e5e63-8184-4b9a-b3d2-e40d3d4e33a3,.d9aa0adb-0bcd-465f-ac97-1e94e89960fa,.ec3d38e8-2be3-477c-a4e6-f05fa7b379ce{stroke:#dcdbdb;}.ec3d38e8-2be3-477c-a4e6-f05fa7b379ce{stroke-width:0.17px;fill:url(#f4dbfff1-62fc-4443-9786-db06064d12b0);}.b28df67b-260b-4ad2-80c4-164873570ce4{fill:url(#1a945c50-db49-43fc-a7eb-3c82bbbadda2);}.\37 e48a505-82fa-4508-a4e6-ac7d170083e9{fill:#2d2d2d;}.\35 cac6937-349f-4563-9759-ce5a6b8e2d67{stroke-width:0.13px;fill:url(#cd90b499-f407-49c9-9d14-3582a408201a);}.b3c3b644-a310-4fec-93a9-84a44f8eaa38{fill:url(#f0e3b65b-92b2-4d7f-b145-f2fe22c21cd4);}.\30 d0c663a-d219-4f09-bac6-953845bd78d1{stroke-width:0.09px;fill:url(#a2f81a3b-40ce-4e56-8900-7cc22d85c18b);}.\39 98c81f2-ed3b-41a7-86f2-773e5ed42883{fill:url(#57f37d6d-1dbe-446e-a35a-89715190f6a2);}.cc3e5e63-8184-4b9a-b3d2-e40d3d4e33a3{stroke-width:0.15px;fill:url(#d86bef29-1c90-4ceb-ac9a-ea471d223071);}.\31 470a9fe-1baf-42f3-b179-f81fe0f826b5{fill:url(#db9f1b7e-a597-410b-b3ed-98dc32d2c1a7);}.\36 884c3c1-01b0-4bc4-a6e6-233b6bf15336{stroke-width:0.06px;fill:url(#9713c8ba-d0f6-4dd4-bfbf-abc217cc7b5e);}.\39 aa3ff71-d179-4033-8d2b-29aead315cf2{fill:url(#8d07731a-5288-47e2-b3e6-f09c26f14eaa);}.\34 d2c6ad2-231c-4cc6-b1b4-be8c1d9bfacf{fill:#030302;opacity:0.6;}.\38 bfc4737-3d94-4a46-945c-c7d58d9db1c8{fill:#23150b;}.bcf28205-e6da-4fa3-b21c-e4b9151bd200{fill:#d22627;stroke-width:0.11px;}.\34 65f3410-7ba5-4570-8a6d-51eababb80b8,.bcf28205-e6da-4fa3-b21c-e4b9151bd200{stroke:#000;}.\35 28ec313-510d-4918-a0b0-03c90b820cba{fill:#e54a52;}.\35 848f86c-e272-4bc6-832f-8f80ce69a215{fill:#231f20;}.\36 95558b9-e573-463f-8ee3-8b21c6d6ac1f,.ab456a33-454e-4c1a-9ded-715407eba2a0,.f8ee5634-842f-4cf7-a3fd-3d718179a1a4{opacity:0.2;}.f8ee5634-842f-4cf7-a3fd-3d718179a1a4{fill:url(#7ffad915-8112-4d4e-b2ab-4bc8ba1bf1a1);}.\30 d02534e-7934-4397-b84c-b2035db89434{fill:#5e4730;}.c8b234d2-37a5-4772-92a0-f6ed86b4a87b{fill:#3e2514;}.\34 65f3410-7ba5-4570-8a6d-51eababb80b8,.ea0341ee-6656-4e8e-bbb9-2dcca3226f04{fill:#553d29;}.\30 2896bba-7146-4e57-9517-22188ab76ecd,.\34 ca6a0ba-6737-4362-aea9-0823679d2621{fill:#3d2a1b;}.\34 65f3410-7ba5-4570-8a6d-51eababb80b8{stroke-width:0.41px;}.\30 55e0edb-4923-4005-9afe-a2db28945725,.\37 32cc787-aa39-4748-8d33-44c19859c25a,.\38 98f0514-71d1-45a3-89ee-fecf8ab0a2b8,.ae8fd65a-61d8-4c52-bf00-c8080ed6d14f{fill:#886342;}.a094eeed-2466-4095-8f38-a9f806b1c265,.dcfd6584-e7a2-460d-95ab-101b92901e23{fill:#71553b;}.\33 12d481a-9b0e-4a05-9019-7bbd9a5c4c6a,.adcd1f01-c764-4183-83eb-2bd275e8b9c6{fill:#87674d;}.\32 3bf3787-b192-404f-a258-895ade03e35d,.\33 12d481a-9b0e-4a05-9019-7bbd9a5c4c6a{opacity:0.33;}.\33 7034297-4919-4b45-a569-e55ba416546a{opacity:0.9;}.\37 32cc787-aa39-4748-8d33-44c19859c25a{opacity:0.61;}.ab456a33-454e-4c1a-9ded-715407eba2a0{fill:#a8754c;}.\36 95558b9-e573-463f-8ee3-8b21c6d6ac1f{fill:#be9a7c;}.aa222cc6-88ef-46ca-8687-5064dea13c3d{fill:#ee2937;}.\38 f9045d1-25c0-45e0-a34a-e67c7ceef127{fill:url(#70ba2757-2ea7-41cd-bf35-b0242affe495);}.d6e6fdfd-3e54-42b7-ac98-59c076ce1eca{fill:url(#d6613c36-f901-4b91-a0a6-e97a457dcd17);}.\36 1dc4c24-808b-44e3-8d08-722317858a01{fill:url(#0d3a5cfb-96da-4562-80f0-7a0eef84e5dd);}.\35 9643559-40c1-4f15-8ede-3c430845ef4b{fill:url(#28666ce8-318d-4af5-8409-562d963fc697);}.d9aa0adb-0bcd-465f-ac97-1e94e89960fa{stroke-width:0.18px;fill:url(#f365573f-b448-4d80-97cf-557f3e29f7cc);}.\34 8ca674a-767e-41f2-9fcd-020b97e90613{fill:url(#ddf8c1d5-c095-4e66-8664-709fe6bf0b4d);}.e3bdf262-e687-40a0-a6c4-70250900a4c8{fill:#ffc709;}.\34 ac4732a-8095-43ea-9afa-eb410b7756f6{fill:url(#c883d911-2472-4b1f-b4f3-04abb4f075d9);}.\36 35bcb06-511d-4e04-a9d6-37b2fca5be75{fill:url(#441a9372-7e20-4fd7-a2de-57229b68f03f);}.\34 3b82f7d-692c-4960-85eb-45ede5a9d3dd{fill:url(#75bdefaa-19fc-49a0-aeb2-4834e7ba7c04);}.\34 05a93db-bbbe-4e94-b93d-2ea0393f95cc{fill:url(#a9cb9186-2814-4080-88c2-bcdd28955ab1);}
+
+
+/* EIGEN CSS */
+#selectKnop {
+    width: 40%;
+    max-width: 160px;
+    position: absolute;
+    margin-left:auto;
+    margin-right: auto;
+    right:0;
+    left:0;
+    bottom: 25%;
+}
+/* active style */
+#selectKnop:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#selectKnop:active .e704a171-da20-4141-ba85-f4030ce133db {
+    fill: #eca521;
+    outline: none;
+}
+#selectKnop:active .e8ff9c7f-04ce-47b1-bb69-cd8dc69ef130 {
+    fill: #d87227;
+    outline: none;
+}
+
+#monsterSelectBar {
+  width: 75%;
+  max-width: 300px;
+  position: absolute;
+  bottom: 4%;
+  margin-left:auto;
+  margin-right: auto;
+  right:0;
+  left:0;
+}
+
+
+MonsterSelectBg {
+    
+    height: 100%;
+    width: 100.2%;
+    background-size: 100% 100.2%;
+    -o-background-size: 100% 100.2%;
+    -webkit-background-size: 100% 100.2%;
+    background-size: cover;
+}
+
+/* backgrounds*/
+#steenMonsterSelectBG {
+    background-image:url(links/steenBG.svg);
+    height: 100%;
+    width: 100.2%;
+    background-size: 100% 100.2%;
+    -o-background-size: 100% 100.2%;
+    -webkit-background-size: 100% 100.2%;
+    background-size: cover;
+}
+
+#vuurMonsterSelectBG {
+    background-image: url(links/vuurBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#waterMonsterSelectBG {
+    background-image: url(links/waterBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#luchtMonsterSelectBG {
+    background-image: url(links/luchtBG.svg);
+    height: 100%;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: cover;
+}
+
+#monsterSelectBg {
+    height: 100%;
+    width: 100.2%;
+    background-size: 100% 100.2%;
+    -o-background-size: 100% 100.2%;
+    -webkit-background-size: 100% 100.2%;
+    background-size: cover;
+}
+
+.MonsterSelectDisplayNone {
+  display: none;
+}
+
+.activeMonsterIconen {
+    transform: scale(0.90);
+    transform-origin: center;
+   transition-duration: 0.2s;
+}
+
+#monsterInfoKnopStyle {
+    width: 10%;
+    max-width: 35px;
+    position: absolute;
+    left:-170px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 109px;
+    z-index: 100;
+}
+
+/* active style */
+#monsterInfoKnop:active {
+    transform: scale(0.95);
+    transition-duration: 0.2s;
+    outline: none;
+}
+
+#monsterInfoKnop:active .e5127a9a-1156-4a10-a0d2-89d3f0668cab {
+    fill: #eca521;
+    outline: none;
+}
+#monsterInfoKnop:active .360f7944-9830-4ce1-a194-30c09f9cba58 {
+    fill: #d87227;
+    outline: none;
+}
+
+
+/* CAMERA */
+#cameraBlackBg {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+/* BATTLE PAGE SVG */
+
+/* STEEN MONSTER */
+.\30 fffac42-dada-4771-b908-fae7724b6a89{fill:#c0964b;opacity:0.6;}.\38 7c6c6ab-69f7-4948-b704-828b62af4fad{fill:#d8b266;opacity:0.75;}.\37 4689daa-a119-478e-836e-67c2d5f4624e{fill:#5e4730;}.\37 db7ae44-6a99-4fb1-8e10-21c46b469efe{fill:#3e2514;}.\35 c21ce22-82fd-4bc8-aed1-9cf1f8ad9b6e,.\37 385a390-7792-4b87-ac67-0d6cde5b6556{fill:#71553b;}.\36 93e1cd0-d943-4c4c-b697-10e496f157f4,.\37 385a390-7792-4b87-ac67-0d6cde5b6556,.b10cb3a2-78c5-4910-9af0-d39af57f305c{opacity:0.4;}.\32 f1d4e90-70ef-484a-a8de-72b6e4c7e2c5,.\36 14725e7-f903-4fa7-afd5-cace0c1df893{fill:#3d2a1b;}.\32 f1d4e90-70ef-484a-a8de-72b6e4c7e2c5,.ce64158a-f4f2-4e61-9c8f-41bf1469ad53{opacity:0.5;}.e2c09911-295a-49cd-b283-ed2964e471c5{fill:#553d29;}.\35 11b6ad9-4ecf-488d-b09d-fa180926af0a,.e27324b2-fe75-4fe2-aa78-072788ccc672{fill:#87674d;}.\31 48841da-3ac2-4018-b286-1e8270ebefe0,.e27324b2-fe75-4fe2-aa78-072788ccc672{opacity:0.33;}.\32 f70cedb-bb01-48d6-a4ae-ab05ffa4a231,.\34 4d4b06e-e0c8-4fed-9260-5b908ba8693a,.b10cb3a2-78c5-4910-9af0-d39af57f305c,.fe187df2-5579-4395-b6b0-1891a1ecb0a6{fill:#886342;}.\39 db03d56-0332-40df-8c66-e2d4042240c6{fill:#3d2515;}.bdcce933-e42f-4fcd-93c2-51c80ef668f3{fill:#24130b;opacity:0.25;}.\34 d9b0065-011d-40bc-b0ca-245739a6746e{fill:#be9a7c;}.\34 d9b0065-011d-40bc-b0ca-245739a6746e,.\35 68cd36e-d618-4258-8724-7097986a5e7b{opacity:0.2;}.\33 bd94dad-27bd-4490-a05f-45783274b7f2{opacity:0.9;}.fe187df2-5579-4395-b6b0-1891a1ecb0a6{opacity:0.61;}.\31 5539b63-4cd5-43f0-9335-c29eef69b065{fill:none;}.\35 68cd36e-d618-4258-8724-7097986a5e7b{fill:#a8754c;}.\34 4b22970-b1c2-4237-aece-5f49ecd26572{opacity:0.7;}.\32 f70cedb-bb01-48d6-a4ae-ab05ffa4a231{opacity:0.3;}
+
+/* vuur monster */
+.\33 ab62471-77c2-4915-8596-01a2d77489d7{fill:#c0964b;opacity:0.6;}.\35 985c447-2754-4dfd-9457-6d41db051313{fill:#d8b266;opacity:0.75;}.\35 e071867-0781-4ec8-a4cf-d98b043360cb{stroke:#e47f25;stroke-miterlimit:10;stroke-width:1.08px;fill:url(#0433aa7c-4ff4-43f0-bfc0-7c8f65765b8a);}.\35 4cada85-4c3e-4c4c-b5d8-1cab95c434d8{fill:url(#d45b4f37-bec3-4324-9235-2220af0c0a7e);}.b279a208-0847-457c-92f0-ed5f52220589{fill:url(#14a068d9-fd77-4ad8-9a4e-f881a54dece3);}.\32 4ec086b-827e-49a1-bcdc-34c4b7ff4d8f{fill:#e47f25;}.\30 c24ef7d-86aa-4fec-a000-99cad66a6ad3{fill:url(#2da5b857-c527-488b-a144-b5c732e0f3cf);}.b58cd292-67f5-4b16-88ee-250d7c4c3f7b{opacity:0.5;fill:url(#356829b3-8bff-403b-8193-59c882d19e1d);}.\32 1f957bb-3b92-47c0-8b13-2f351e507c5e{fill:#ffc709;}.\38 06f69c4-a723-4187-99a8-52e943a8aad2{fill:url(#a840d8c8-31bf-4712-b417-1200ccf275b0);}.\33 1bc7e16-195f-4ab6-8216-c12ede692e54{fill:url(#acd71a7b-d6f8-4289-a9de-451c0e2317d2);}.\30 4271c85-8f4f-4f6b-a1fa-52eba44fe8fa{fill:url(#d320d07f-bfac-4b81-a567-90f76e66e91a);}.af99369e-7d1b-4be7-b67f-a009620d0727{fill:url(#bc3eb440-74f4-4a4e-af8a-8e204414730b);}
+
+/* water monster */
+.\38 aedb611-e33a-48ca-807b-9a075fe6c9e6{fill:#c0964b;opacity:0.6;}.\33 26e3118-58e3-41c2-941b-65278a600f59{fill:#d8b266;opacity:0.75;}.df7f0198-986b-4e4e-9960-c9812c025c76{fill:#a57b36;opacity:0.25;}.\30 6e3343a-2bb2-44c1-83c0-085e756f3011{fill:#249fd6;stroke:#2e3192;stroke-width:1.04px;}.\30 6e3343a-2bb2-44c1-83c0-085e756f3011,.d1729392-3101-4cdd-aae4-fbab86b4c800{stroke-miterlimit:10;}.a469d34f-a4af-4dbd-9987-58e4d94e35a0,.d1729392-3101-4cdd-aae4-fbab86b4c800{fill:#53aac9;}.d1729392-3101-4cdd-aae4-fbab86b4c800{stroke:#518ead;stroke-width:0.94px;}.\36 ec937a3-acc8-4b55-9cea-cf3aedc5f1cf,.\39 a0dc28c-7a7a-4942-8e3a-83cb3af4a6d7,.ba5f5911-a7e9-4cd5-aafa-d18231e8370c{fill:#5591af;}.\31 9580325-2259-4742-ad63-cf1969e8e208{fill:#4ca7bc;}.\30 25d61e6-c81a-4d2c-b7d3-5ea5647dbf1a{fill:#52b8cf;}.\38 4222d3c-f105-49bd-aeca-653d825ab6df{fill:#1d88c9;}.\36 ec937a3-acc8-4b55-9cea-cf3aedc5f1cf{opacity:0.7;}.ba5f5911-a7e9-4cd5-aafa-d18231e8370c{opacity:0.5;}
+
+/* LUCHT MONSTER */
+.\38 72d16c3-9172-4ad2-b985-ff2ec422e93a{fill:#c0964b;opacity:0.6;}.\32 8705bd1-fb70-45e3-a2d8-effd73b82c8a{fill:#d8b266;opacity:0.75;}.\39 e9dd8a2-c9f5-4430-a026-2cb5a7bcc612,.fb34b0dc-d633-47ae-bef9-174e2f875aea{fill:none;}.fb34b0dc-d633-47ae-bef9-174e2f875aea{stroke:#231f20;stroke-width:1.53px;}.\38 95bb790-0c8f-410e-9805-0da350408521,.\39 e9dd8a2-c9f5-4430-a026-2cb5a7bcc612,.fb34b0dc-d633-47ae-bef9-174e2f875aea{stroke-miterlimit:10;}.\38 95bb790-0c8f-410e-9805-0da350408521{fill:#98aa7e;stroke:#8d9b72;stroke-width:1.14px;}.\30 f581c7d-2804-4a99-99ad-c5beb24098b0{fill:#aacd83;opacity:0.5;}.\36 e037125-2b0f-4689-9034-01bafb75ecbd{fill:#2a2b27;opacity:0.05;}.\36 01db95b-5889-4f27-b1a4-179e40b689a7{fill:#e4efc8;opacity:0.3;}.\32 cd0b727-e1ad-4f74-a764-f23f10b2f414{fill:#975e8b;}.\30 d6731c3-8d44-4414-b4f8-27c7708bdaae{fill:#805277;}.\31 5d7cfb9-dde6-41f4-952c-65ce87380553,.\39 e9dd8a2-c9f5-4430-a026-2cb5a7bcc612{opacity:0.1;}.\36 ac50fe3-bac2-4d6c-99a6-c80ecde84936{fill:#5d174e;}.f5ef3f9d-8b9f-4027-a0fe-bfa8a429427a{fill:#ed196f;}.\38 65f9a46-8753-4790-98ec-7f99517792fa{fill:#c51d63;}.\39 e9dd8a2-c9f5-4430-a026-2cb5a7bcc612{stroke:#5d174e;stroke-width:2.12px;}.\33 9615ae5-f631-4f9a-9421-319789a02d5d{fill:#faf068;}.f2af6d6e-c1c1-4e04-8ef8-0c2edb2be4f1{fill:#f2df2d;}.\32 782ff5c-7ba8-46aa-b26e-632714191709{fill:#a57b36;opacity:0.25;}
+
+/* STEEN MONSTER HP BAR */
+.ca39c314-7b98-4744-9c98-79a9ad3a8a9b{isolation:isolate;}.ddf53b34-9657-4ac8-90f5-e228a636240c{fill:#603316;}.\36 211cb95-293b-47b3-ad80-42afdbbf849f{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\33 3d1acde-acae-40b9-ba70-a231ebf9cf08{fill:#eec21b;}.\33 2d4b5e9-a81e-4251-963b-a044eefd9bc0{fill:#ffcf02;}.b8b6bf3f-7ddf-494e-a870-eccdabb228cd{fill:#c2c1c1;}.ffc8d7d9-345e-4ff7-b257-27c18e4499cc{fill:#010101;}.af5e13ec-36da-4644-8229-48dc2feeea76{fill:#949494;}.fa0f75ec-77f9-4ed3-a2cf-7ce796feed0b{fill:#757676;}.bbb39a52-e5b6-41cd-b930-21359659de30{fill:#7d461d;}.d74fb9b3-549f-446a-ad94-9290e1fe0393{fill:#fff;}.\39 3f1ee53-9197-4a38-b879-c5b9efb1125a{fill:#757576;}.\38 da32876-fb10-4dbc-8d96-b3059efb6a6b{fill:#57b947;}.\34 2ce29f6-4126-45d5-aef0-e9bfda135f54{opacity:0.31;}.\37 11cbd38-ae58-4337-8641-6ee18e73bbe2{fill:#cae3b4;}.\39 1e58af2-da9c-4182-b6e9-10c85288accc{fill:#89c540;}.\31 21a08ed-589c-42f9-a77c-01bdc82f0aff{opacity:0.8;font-size:37.13px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;font-weight:700;}.aafb2920-9f87-4793-a49a-01f143d3651b{letter-spacing:-0.01em;}.ca9157c2-fa9f-4753-9fec-82dc72942540{letter-spacing:-0.02em;}
+
+/* Tegenstander */
+.\31 b61fb81-5666-49f5-a7ae-e5af6e4cdacc{fill:#c0964b;}.\31 b61fb81-5666-49f5-a7ae-e5af6e4cdacc,.c6507ae3-73c2-43e1-9392-7862a81e5d20{opacity:0.6;}.febb4dcf-06b5-47c8-9ee9-f193d9713d8f{fill:#d8b266;opacity:0.75;}.c6507ae3-73c2-43e1-9392-7862a81e5d20{fill:#030302;}.b35e071b-a4da-45fa-aa20-9d8e07ca31ce{fill:#23150b;}.ba9d6a54-ae8b-4fd4-89eb-617a389e5d76{fill:#d22627;stroke-width:0.41px;}.ac8dcca3-c9e8-4385-bd26-cea1073fa606,.ba9d6a54-ae8b-4fd4-89eb-617a389e5d76{stroke:#000;stroke-miterlimit:10;}.\39 230727a-ad72-4683-8e87-d5ca6c99fe3e{fill:#e54a52;}.ac02ae51-94b5-4219-a8a5-efab814b03b1{fill:#231f20;}.\36 c0239d6-2084-42a2-b283-781e536975a6,.\39 71ffeb7-d490-4d09-9e90-b9655a12ebaf,.fdd351ca-b246-49ea-aaa0-fa2f1adc6640{opacity:0.2;}.\39 71ffeb7-d490-4d09-9e90-b9655a12ebaf{fill:url(#ae5deca8-4e23-4fb5-aaa9-3f7ea75a5154);}.\37 e172d0e-6271-4268-9bd7-279c156e853f{fill:#5e4730;}.\32 c57c8c0-722f-44fc-ac5c-ada4e7c5e4b6{fill:#3e2514;}.\34 2a28cb1-8554-4715-bff6-7265dff8ba13,.ac8dcca3-c9e8-4385-bd26-cea1073fa606{fill:#553d29;}.\35 8e074e7-e12c-4ad9-b9f7-3ae448a6af98,.\38 d37fe5f-cfcc-4414-8951-fad27b61a7e6{fill:#3d2a1b;}.\35 8e074e7-e12c-4ad9-b9f7-3ae448a6af98,.\39 0fb1aef-9f57-40a1-8f2a-cb2cdbb6f0cd{opacity:0.5;}.ac8dcca3-c9e8-4385-bd26-cea1073fa606{stroke-width:1.52px;}.\30 730f946-99d9-4ae2-b49a-98668157783b,.\35 328ed60-8d39-4775-a54b-5033e95f9ffc,.\37 9e80fea-c936-4e9f-878b-fd09f55c99c2,.\39 2eb61f2-3bda-4967-b159-6da6795f54f4{fill:#886342;}.\39 21657bc-f8ca-4854-95e8-abf2b4d6b97d,.\39 2eb61f2-3bda-4967-b159-6da6795f54f4,.f3160f8c-c824-4bc4-8f26-fb89d42ef113{opacity:0.4;}.\38 26ae162-85c9-48db-b1b5-51fbcab165c3,.\39 21657bc-f8ca-4854-95e8-abf2b4d6b97d{fill:#71553b;}.\36 082229c-6135-4fa9-a737-441ab627f143,.c11d2281-b583-447e-8e7a-3672021b1fad{fill:#87674d;}.\31 b3d25dc-e54f-41ee-8b36-9b137472ce85,.c11d2281-b583-447e-8e7a-3672021b1fad{opacity:0.33;}.\36 f7e8e3f-4bea-448f-8e2b-cb36089e3a04{opacity:0.9;}.\30 730f946-99d9-4ae2-b49a-98668157783b{opacity:0.61;}.b78a0392-6b22-4560-b5d1-7bbe7e513600{fill:none;}.\36 c0239d6-2084-42a2-b283-781e536975a6{fill:#a8754c;}.\36 180e571-7d98-4306-b671-3f197059259d{opacity:0.7;}.\37 9e80fea-c936-4e9f-878b-fd09f55c99c2{opacity:0.3;}.fdd351ca-b246-49ea-aaa0-fa2f1adc6640{fill:#be9a7c;}
+
+/* tegenstander hp bar */
+.f594ade5-0e9e-434f-b475-e3d89bc60aef{isolation:isolate;}.\36 3ba5729-d976-4e39-b629-8cd5ba07dc60{fill:#757576;}.\34 72a8433-8ae4-4839-9fb1-c3c2ca6920f1{fill:#603316;}.eccc945f-b7a8-4af4-ae9e-ac17baa85d6f{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.f1808a1d-3a54-4d38-b23a-f629d381e215{fill:#eec21b;}.a48bacb5-1509-4ee4-80e6-eb5e08710ea6{fill:#ffcf02;}.\37 6251a1a-56e1-4d52-a329-6001b48f7296{fill:#c2c1c1;}.\32 aa7b916-47a7-41f3-b19c-9b5728ae0f0d{fill:#010101;}.afdff7f3-987d-4081-a275-d35905d90628{fill:#949494;}.cc293d70-0cb7-450b-bd7f-5deda8b90b45{fill:#757676;}.\39 65c99bc-d687-4c90-89ef-004dccb1f9c9{fill:#7d461d;}.fd4e59bd-6b59-41bc-be46-84f34da5c63c{fill:#fff;}.\39 52c8e0d-87f4-41a9-aa2a-3857044b8bfb{fill:#57b947;}.\35 7401540-1718-4493-9fd2-f93daf72ec2b{opacity:0.31;}.\31 e03795d-7b0e-4235-b955-b1225478df87{fill:#cae3b4;}.e3867361-010f-4f6b-8bcd-4fbf54b7a8bd{fill:#89c540;}.\30 bfed0d0-86b6-4390-a230-7eca1abe0c48{opacity:0.8;font-size:37.13px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;font-weight:700;}.e6cba688-4ea7-46b8-8ce2-e687961f65f8{letter-spacing:-0.01em;}.\39 d8df83c-b54d-4af3-9694-b82e0e401a38{letter-spacing:-0.02em;}
+
+/* vraag en antwoord kader VRAAG 1*/
+.\34 b2348ad-6f53-4d01-8f83-d9bddf484e2a{fill:#fffbdb;}.\32 e295a8b-1943-4c49-9022-53260f85859c{fill:#ede1b0;}.ac1571d6-6b6e-4799-8deb-62a0faf9b38c{fill:#7e451e;}.\33 db97a23-5c6e-40b9-bd37-480d4c80a189,.a9630632-0fdf-4ed7-a827-e7c38d99ff38{font-size:35px;}.\33 db97a23-5c6e-40b9-bd37-480d4c80a189{fill:#4b230d;}.\31 9484a8c-2620-4347-9f7b-b713b83f6579,.\33 db97a23-5c6e-40b9-bd37-480d4c80a189,.\37 dae1289-0a26-4fe6-bc5f-c93a7c0434ff,.a9630632-0fdf-4ed7-a827-e7c38d99ff38{font-family:Montserrat-Bold, Montserrat;font-weight:700;}.\32 06992f1-d378-4b7d-a900-b1cc1725875e,.\33 db97a23-5c6e-40b9-bd37-480d4c80a189,.a9630632-0fdf-4ed7-a827-e7c38d99ff38{letter-spacing:0.1em;}.f11d5d15-d22d-415e-ac10-5be123e6ae35{letter-spacing:0.06em;}.\37 b9ff123-05a4-4512-b4b5-5ee02c956529{letter-spacing:0.1em;}.e146a253-a8bb-443c-9c49-6b9f58d46eb4{letter-spacing:0.09em;}.f4bd535f-d198-4dc2-95b5-58632fa1a4c6{letter-spacing:0.08em;}.\35 a83484e-3d29-4987-b550-7557a29ce081{letter-spacing:0.08em;}.\35 1eb91dc-1f02-4a10-976a-35b9acbcbd32{letter-spacing:0.09em;}.\31 9484a8c-2620-4347-9f7b-b713b83f6579{opacity:0.5;font-size:25.5px;fill:#a59555;letter-spacing:0.1em;}.\32 5ebb153-86b6-4e07-ade5-5715f45f284a{fill:#d7d7d7;}.b18d21b7-70ab-46a5-af6a-68164303a87e{fill:#bbbcbc;}.\34 d28a27f-9084-46b6-82f9-5a78f0ff1ba8{fill:#cbcaca;}.c81221ef-24cb-4559-b800-a183421faa90{fill:#e6e6e5;}.\37 dae1289-0a26-4fe6-bc5f-c93a7c0434ff{font-size:38.96px;fill:#7c7b7b;letter-spacing:0.1em;}.a9630632-0fdf-4ed7-a827-e7c38d99ff38{fill:#59290d;}
+
+/* vraag en antwoord kader VRAAG 2*/
+.\36 754a9d2-a807-407f-939c-baf62ff0d72e{fill:#fffbdb;}.\37 5e8a154-4703-4ee0-9a17-eceea012f225{fill:#ede1b0;}.acf7dd4e-a576-4ddd-82b2-177439152f2a{fill:#7e451e;}.\32 db07d8c-ccb0-4288-800d-a7c3822985b4,.b3955d1d-e343-45e1-8630-77b0cddbf2c4{font-size:35px;letter-spacing:0.1em;}.\32 db07d8c-ccb0-4288-800d-a7c3822985b4{fill:#4b230d;}.\32 db07d8c-ccb0-4288-800d-a7c3822985b4,.\36 5625cbb-d558-4f13-a841-cd0791346366,.b3955d1d-e343-45e1-8630-77b0cddbf2c4,.cd18dcba-51ce-4327-87f0-93ec8266fd4d{font-family:Montserrat-Bold, Montserrat;font-weight:700;}.a68f9bdc-296c-49c3-9913-54495e928c6b{letter-spacing:0.06em;}.\36 5625cbb-d558-4f13-a841-cd0791346366{opacity:0.5;font-size:25.5px;fill:#a59555;letter-spacing:0.1em;}.da74a6d4-a5e8-49c4-adaf-f1530bf0864e{fill:#d7d7d7;}.\38 2c96513-9c3f-458d-969b-c5bcc48edebd{fill:#bbbcbc;}.\36 aebac44-c2f5-44ba-b1e9-b2334af3f263{fill:#cbcaca;}.e86e6e10-543e-4a01-a810-d41c8c462067{fill:#e6e6e5;}.cd18dcba-51ce-4327-87f0-93ec8266fd4d{font-size:38.96px;fill:#7c7b7b;letter-spacing:0.1em;}.b3955d1d-e343-45e1-8630-77b0cddbf2c4{fill:#59290d;}.\32 e016565-db76-4af7-b47c-b103da475436{letter-spacing:0.1em;}.\39 f2908e0-89a4-47f8-a517-1ae60cc742d8{letter-spacing:0.06em;}
+
+
+/* POP up kader "gewonnen" */
+.\35 7aebb3d-98bd-4cc5-9fb1-0c4ca3c52e82{fill:#fffbdb;}.c604c705-91de-4e5d-8dda-4083b8baa020{fill:#ede1b0;}.\32 77e288e-4582-4298-8253-97dab7cfa6a5{fill:#7e451e;}.\33 470f246-2077-408c-8a40-360541a82148,.\37 e52e10f-c18a-4e84-b523-61d42729f055{font-size:64.64px;letter-spacing:0.1em;}.\30 32700ed-2a78-4981-8515-56138ea6867d,.\33 470f246-2077-408c-8a40-360541a82148,.b8627a0f-2568-4f07-a45c-0aab3d11747a{fill:#4b230d;}.\30 32700ed-2a78-4981-8515-56138ea6867d,.\33 470f246-2077-408c-8a40-360541a82148,.b8627a0f-2568-4f07-a45c-0aab3d11747a,.ba6c89ea-4250-49e3-b8cf-efadf5eb5b3c{font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;}.\30 32700ed-2a78-4981-8515-56138ea6867d,.b8627a0f-2568-4f07-a45c-0aab3d11747a{font-size:50.91px;}.\30 32700ed-2a78-4981-8515-56138ea6867d{letter-spacing:0.1em;}.b8627a0f-2568-4f07-a45c-0aab3d11747a{letter-spacing:0.1em;}.\33 c0e47e8-3caa-4e96-93ad-855b67388b4e{fill:#fff200;}.\31 fb39bcc-c044-4ef2-85d0-d1f7f3537c75{fill:#e8c81d;}.ba6c89ea-4250-49e3-b8cf-efadf5eb5b3c,.c2720e01-2839-4174-b1da-48107a143363{fill:#452e17;}.\38 310daaf-14a5-4b97-8257-02f803735a7e{fill:#f4bb2b;}.c0bb8596-c859-446e-93df-312be8ff5385{fill:#483118;}.\37 b70212a-1a17-4938-b0a9-461e08b6876a{fill:#d98327;}.ba6c89ea-4250-49e3-b8cf-efadf5eb5b3c{font-size:52.55px;letter-spacing:0.1em;}
+
+/* POP up kader "verloren" */
+.\39 c6f917f-7355-4579-9a8f-565bd33bf523{fill:#fffbdb;}.af761bf9-1f88-4b2a-b7c4-db96c6f4d1d6{fill:#ede1b0;}.dfcae4e3-f4d2-4871-a5c3-0097d0b8a580{fill:#7e451e;}.cafe49cd-1636-4121-a15f-723f026738f7{fill:#483118;}.d2be99d4-3485-4907-9776-0cf44e72337e{fill:#f4bb2b;}.\39 9b55ba4-4efe-4111-aefc-b54da180ff13{fill:#d98327;}.\31 0bcc61e-828a-407e-bfca-0d4c3cbe5269,.\33 322585b-4ff9-4931-851f-9ac1d3d4fb3e{font-size:64.64px;}.\30 15c77c6-a79a-4190-9b63-623728fa75cd,.\30 c844b19-c9de-4155-bf24-0d5737ee7543,.\31 0bcc61e-828a-407e-bfca-0d4c3cbe5269{fill:#4b230d;}.\30 15c77c6-a79a-4190-9b63-623728fa75cd,.\30 c844b19-c9de-4155-bf24-0d5737ee7543,.\31 0bcc61e-828a-407e-bfca-0d4c3cbe5269,.\34 145b22e-4c27-49da-be8a-8427abccea50{font-family:HelveticaNeue-Bold, Helvetica Neue;font-weight:700;}.\31 0bcc61e-828a-407e-bfca-0d4c3cbe5269{letter-spacing:0.1em;}.\30 15c77c6-a79a-4190-9b63-623728fa75cd,.\30 c844b19-c9de-4155-bf24-0d5737ee7543{font-size:50.91px;}.\30 15c77c6-a79a-4190-9b63-623728fa75cd{letter-spacing:0.1em;}.\33 322585b-4ff9-4931-851f-9ac1d3d4fb3e{letter-spacing:0.1em;}.\30 c844b19-c9de-4155-bf24-0d5737ee7543{letter-spacing:0.1em;}.eaaa262e-7674-4cf9-89e4-a47851db7425{fill:#999ead;}.\32 bf20637-ace3-422c-b786-17355dd31585{fill:#757576;}.\32 1b27f3b-b84c-4c87-9d6f-09c3efca9380,.\34 145b22e-4c27-49da-be8a-8427abccea50{fill:#452e17;}.\34 145b22e-4c27-49da-be8a-8427abccea50{font-size:52.55px;letter-spacing:0.1em;}
+
+
+/* vuur hp bar */
+.\39 227fea1-cf41-4625-aaba-92e2ae0d3c03{isolation:isolate;}.\32 40315ad-e526-4e0b-8457-bfaf3992628c{fill:#603316;}.\32 512eb9c-0e25-4746-aa16-0635ca7a6452{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.d2329e7e-e82f-4c82-9b2b-abc4ea53e00a{fill:#eec21b;}.\30 e42df65-4351-430c-9cf5-9c1dc45cc5f8{fill:#ffcf02;}.ed0df8ec-d809-40bc-abec-1ec2881a5f8f{fill:#f04e23;stroke:#231f20;stroke-miterlimit:10;stroke-width:1.62px;}.\34 631af35-8e1a-4881-8313-36b771d2c694{fill:#f47421;}.\36 5616702-a3f2-4b3c-9a69-f943d5f1b36e{fill:#fec014;}.\34 75d03ff-348e-49e6-a52c-b5ce19a4a50e{fill:#7d461d;}.b4329472-0234-465a-88c6-cbc10c878b5c{fill:#fff;}.\39 5641503-dbfc-4832-bccc-961e020b81d4{fill:#757576;}.\37 ae12dd0-fd83-40f4-be42-77d84ce5d605{fill:#57b947;}.\36 459abc0-3f4c-4dae-93ce-9c738b3a054d{opacity:0.31;}.\37 ab79aac-f166-48f4-841b-b2196b77166c{fill:#cae3b4;}.fa151254-3aaf-4a0a-a3df-ae0dd35c6a7b{fill:#89c540;}.\33 c53dca4-72d4-4ad9-bbc7-62178cdb5117{opacity:0.8;font-size:37.85px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;font-weight:700;}.\34 43e9ad0-8e0e-43d5-a877-7a39ab752b8b{letter-spacing:-0.01em;}
+
+/* water hp bar */
+.\30 5f7c038-00c0-4d10-b5a3-438ab95948cf{isolation:isolate;}.c6268068-83a9-4cf9-b1b5-b08a5326c87a{fill:#7d461d;}.\37 4691f03-17b7-4f36-a6f9-b366a44a70c5{fill:#fff;}.\39 85f4dd7-d7ba-440e-bef2-5fd1d85feda7{fill:#757576;}.\36 291b6db-2c42-4066-9074-9cc1f8a7b52a{fill:#57b947;}.\35 282d767-39b3-4e26-b764-2f5a0f8038af{opacity:0.31;}.f09b4be9-e42c-4228-a73e-cf65d88ba23a{fill:#cae3b4;}.edf7b8c5-3e3c-44a4-bf65-a6c455972deb{fill:#89c540;}.ac3dc8d5-d1a4-48b7-baf3-6819c9713aec{opacity:0.8;font-size:37.13px;fill:#231f20;font-family:Montserrat-Bold, Montserrat;font-weight:700;}.\38 c953418-d75e-414c-ac72-dba00b030d17{letter-spacing:-0.05em;}.\38 af5ef01-dadf-4332-965a-bf9f895ce137{fill:#603316;}.\37 1813d9e-668e-40f1-82c5-5d1cf2b2a8d4{fill:#eec21b;}.c23a3559-cac2-43b9-a15b-f85d61e010df{fill:#ffcf02;}.\32 3963f12-18d9-450f-8353-3049f4f9f893{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.\31 272901f-c02f-4b6c-91e4-ba92e1bb2ec1{fill:#31aae1;}.de9bf079-9244-4908-a4fc-22bde1c4d23f{fill:#010101;}.e70ab327-85e9-4715-a775-2da24094afec{opacity:0.72;}.be506bf7-e509-40c9-8dd8-d7df5b369b41{fill:#64cdf6;}.\35 bbf3c38-964c-41a7-afd2-6352b15713f0{fill:#2d95d2;}
+
+/* LUCHT HP BAR */
+.\34 33e0c5d-c4e7-4ba8-bfc5-bd65a74d73ac{isolation:isolate;}.e649719c-061b-4412-ba18-ccec75bc1288{fill:#7d461d;}.b437cb19-3637-447a-b01a-5d7dd2f8e94a{fill:#fff;}.\34 41721fc-96b2-414a-80b3-9e9aea0536cc{fill:#757576;}.\39 05f3901-4a72-44e4-a1ac-228735bc61ed{fill:#57b947;}.ac491e68-f8c1-467e-beb1-e884e71220eb{opacity:0.31;}.\33 0928901-85c8-4fdf-a1d3-8e161b1e6ed7{fill:#cae3b4;}.\30 e3c95ef-83d4-4b56-9bd6-d5cb2051f871{fill:#89c540;}.b65828f4-8821-4393-85dd-1e689eb44964{opacity:0.8;font-size:37.13px;font-family:Montserrat-Bold, Montserrat;font-weight:700;}.b65828f4-8821-4393-85dd-1e689eb44964,.c12caabb-7f6e-4bff-8c12-536d4170cbf4{fill:#231f20;}.f726670e-1a2f-4b54-86ee-638c52e10e03{letter-spacing:-0.06em;}.\30 0d4fb33-f398-46d4-abab-ab1167a8a5c3{letter-spacing:0em;}.\31 f0431d4-3ed8-4d82-950b-7dda380cedf2{letter-spacing:-0.01em;}.edcf70cd-0efc-4840-8a7d-55b686a2945a{fill:#603316;}.d2e8964d-dfc0-4883-908a-d9f3372efa60{fill:#533914;opacity:0.1;mix-blend-mode:color-burn;}.b74fb213-5c5b-4498-9c67-db95fac336d9{fill:#eec21b;}.\36 44e019c-d7d8-461c-ab51-02dc0e88e5fc{fill:#ffcf02;}.e37301fc-2d9a-40d3-a257-8cb7772a7984{fill:#ededeb;}
+
+/* BATTLE PAGE EIGEN CSS */
+
+#battleBg {
+  background-image: url(links/battleBg_3.svg);
+  background-repeat: repeat-x; 
+  height: 100%; 
+  width: 100vw;
+  background-size: contain;
+  z-index: -300;
+}
+
+/* zorgt dat je geen witte rand van onder krijgt als je heel dun geschaal bent */
+@media screen and (max-width: 305px){
+  #battleBg {
+  background-size: cover;
+}
+}
+
+.resultaatKader {
+  width: 60%;
+  position:absolute;
+  z-index: 400;
+  max-width: 300px;
+  margin:auto;
+  right:0;
+  left:0;
+  top:0;
+  bottom:0;
+}
+
+.eigen-monster-animatie {
+    transform: translate(0px, 0px);
+    transform-origin: center;
+    animation-name: eigen-monster-animatie;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes eigen-monster-animatie {
+    0%   {
+    transform: translate(0px, 0px);
+    }
+    50%  {
+     transform: translate(-50px, 20px)
+    }
+    100% {
+    transform: translate(0px, 0px);
+    }
+}
+
+.tegenstander-monster-animatie {
+    transform: translate(0px, 0px);
+    transform-origin: center;
+    animation-name: tegenstander-monster-animatie;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes tegenstander-monster-animatie {
+    0%   {
+    transform: translate(0px, 0px);
+    }
+    50%  {
+    transform: translate(50px, -15px);
+    }
+    100% {
+    transform: translate(0px, 0px);
+    }
+}
+
+.noClick {
+  pointer-events: none;
+}
+
+/* vraag en antwoord kader */
+#vraagEnAntwoordenKader {
+  width: 30%;
+  min-width: 300px;
+  position: absolute;
+  margin: auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 30;
+}
+
+#vraagEnAntwoordenKaderVraag2 {
+  width: 30%;
+  min-width: 300px;
+  position: absolute;
+  margin: auto;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 30;
+}
+
+.\37 dae1289-0a26-4fe6-bc5f-c93a7c0434ff {
+    font-size: 40px;
+    fill: #7c7b7b;
+    letter-spacing: 0.1em;
+}
+
+/* bovenste knop group id */
+.vraagClickedScale {
+  transform-origin: center;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+/* border*/
+.vraagClicked .borderBottomBovenste, .vraagClicked .borderBottomOnderste, .vraagClicked .borderBottomMiddelste, 
+.vraagClicked .borderBottomBovenste2, .vraagClicked .borderBottomOnderste2, .vraagClicked .borderBottomMiddelste2 {
+  fill: #e0c673;
+}
+
+/* background */
+.vraagClicked .lightBgBovenste, .vraagClicked .lightBgMiddelste, .vraagClicked .lightBgOnderste,
+.vraagClicked .lightBgBovenste2, .vraagClicked .lightBgMiddelste2, .vraagClicked .lightBgOnderste2 {
+    fill: #e5d698;
+}
+
+
+
+#blackOverlayBattle {
+  background-color: black;
+  height:100%;
+  width: 100vw;
+  z-index: 20;
+  position: absolute;
+      
+    opacity: 0.3;
+    z-index: 10;
+}
+
+.vraagFoutBg {
+  fill: #f16263;
+}
+.vraagFoutBorder {
+  fill: #ef3d3b;
+}
+
+.vraagGoedBg {
+  fill: #a9d48d;
+}
+
+.vraagGoedBorder {
+  fill:#6dbe45;
+}
+
+
+
+
+
+#monsterSteenBattle {
+  position:absolute;
+  width: 60%;
+  max-width: 300px;
+  left:5%;
+  bottom: 130px;
+}
+
+
+#tegenstanderMonster {
+    position:absolute;
+  width: 50%;
+  max-width: 250px;
+  right: 5%;
+  bottom: 45%
+}
+
+/* Tegenstander HP bar */
+#hpBarTegenstander {
+    position:absolute;
+  width: 60%;
+  max-width: 300px;
+  left:5%;
+  top: 18vh;
+  
+}
+
+/* dimension hp bar tegenstander */
+.tegenstanderHpBarScaling {
+  transform: scaleX(1.0);
+  transform-origin: right;
+}
+
+/* style green bg hp bar tegenstander */
+.\39 52c8e0d-87f4-41a9-aa2a-3857044b8bfb {
+    fill: #57b947;
+    transition-duration: 2s;
+  transition-delay: 1s
+}
+
+/* style lighter green tegenstander*/
+.\31 e03795d-7b0e-4235-b955-b1225478df87 {
+    fill: #cae3b4;
+  transition-duration: 2s;
+  transition-delay: 1s
+}
+
+/* style border hp bar tegenstander*/
+.e3867361-010f-4f6b-8bcd-4fbf54b7a8bd {
+    fill: #89c540;
+  transition-duration: 2s;
+  transition-delay: 1s
+}
+
+/* Eigen hp bar STEEN */
+#monsterSteenBattleHpBar {
+  width: 60%;
+  position:absolute;
+  right:5%;
+  bottom: 40px;
+  max-width: 300px;
+}
+
+
+.steenHpBarScaling {
+  transform: scaleX(1.0);
+  transform-origin: left;
+}
+
+/* style green bg hp bar */
+.\38 da32876-fb10-4dbc-8d96-b3059efb6a6b {
+    fill: #57b947;
+    transition-duration: 2s;
+    transition-delay: 1s
+}
+
+/* style lighter green steen HP bar */
+.\37 11cbd38-ae58-4337-8641-6ee18e73bbe2 {
+    fill: #cae3b4;
+    transition-duration: 2s;
+  transition-delay: 1s
+}
+
+/* style border hp bar steen */
+.\39 1e58af2-da9c-4182-b6e9-10c85288accc {
+    fill: #89c540;
+    transition-duration: 2s;
+  transition-delay: 1s
+}
+
+/* levens eraf bij vraag 1*/
+.levensErafVraag1 {
+  transform: scaleX(0.0);
+}
+
+
+.gone {
+  display: none;
+}
+.goneAnimation {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+
+/*
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
